@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harshit GS Academy | JPSC Prep</title>
+    <title>CNT Act 1908 Notes for JPSC | Harshit GS Academy</title>
+
     <style>
         :root {
             --primary: #1a2a6c;
@@ -16,36 +17,91 @@
             --margin: #ff7070;
             --line: #e0eaf5;
         }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: var(--light); color: #333; }
-        
-        header.main-header { 
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-            color: white; padding: 40px 20px; text-align: center;
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: var(--light);
+            color: #333;
         }
-        
-        nav { background: #333; overflow: auto; white-space: nowrap; padding: 10px; text-align: center; }
-        nav a { color: white; padding: 10px 20px; text-decoration: none; font-weight: bold; display: inline-block; }
 
-        .container { max-width: 900px; margin: 20px auto; padding: 15px; }
+        header.main-header {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
 
-        .card { 
-            background: white; padding: 20px; margin-bottom: 20px; 
-            border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        nav {
+            background: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 15px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             border-top: 5px solid var(--primary);
         }
-        
-        /* Grid Menu Styling */
-        .grid-menu { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
-        .grid-item { 
-            background:#eef2f7; padding:15px; border-radius:8px; 
-            font-weight: bold; color: var(--primary); text-align: center;
-            cursor: pointer; transition: 0.3s; border: 1px solid transparent;
-        }
-        .grid-item:hover { background: var(--secondary); color: white; }
-        .grid-item.active { border: 2px solid var(--primary); background: #dce4ed; }
 
-        /* Hidden Notebook Content */
-        #cnt-notes { display: none; margin-top: 20px; animation: fadeIn 0.5s; }
+        .cta-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 14px 22px;
+            background: var(--accent);
+            color: white;
+            border-radius: 10px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .grid-menu {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .grid-item {
+            background: #eef2f7;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: var(--primary);
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .grid-item:hover {
+            background: var(--secondary);
+            color: white;
+        }
+
+        #cnt-notes {
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 0.5s;
+        }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
@@ -59,38 +115,53 @@
             padding: 30px 20px 20px 40px;
             border-left: 5px solid var(--margin);
             border-radius: 8px;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
         }
 
-        .section-title { color: var(--blue-ink); font-weight: bold; margin-top: 20px; text-decoration: underline; }
-        .highlight { background: rgba(255, 235, 59, 0.5); padding: 2px 5px; border-radius: 3px; }
-        .badge { display: inline-block; background: var(--ink); color: white; padding: 0 8px; border-radius: 10px; font-size: 0.8rem; }
+        .section-title {
+            color: var(--blue-ink);
+            font-weight: bold;
+            margin-top: 20px;
+            text-decoration: underline;
+        }
 
-        .footer { text-align: center; padding: 30px; color: #888; font-size: 0.9rem; }
+        .highlight {
+            background: rgba(255, 235, 59, 0.5);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--ink);
+            color: white;
+            padding: 0 8px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #777;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
+
 <body>
 
 <header class="main-header">
     <h1>HARSHIT GS ACADEMY</h1>
     <p>Target JPSC & Competitive Exams</p>
-    <p style="font-size:16px; margin-top:10px;">
-  Free, exam-focused handwritten notes for <b>JPSC (Jharkhand)</b>
-</p>
+    <p style="font-size:16px;">
+        Free, exam-focused handwritten notes for <b>JPSC (Jharkhand)</b>
+    </p>
 </header>
-<a href="#cnt-notes" style="
-  display:inline-block;
-  margin:15px auto;
-  padding:12px 20px;
-  background:#27ae60;
-  color:white;
-  border-radius:8px;
-  font-weight:bold;
-  text-decoration:none;">
-📘 Read Free CNT Act Notes (JPSC)
-</a>
+
+<button class="cta-btn" onclick="openCNT()">📘 Read Free CNT Act Notes (JPSC)</button>
+
 <nav>
-    <a href="#">🏠 Home</a>
+    <a href="index.html">🏠 Home</a>
     <a href="#">📖 History</a>
     <a href="#">🌍 Geography</a>
     <a href="#">⚖️ Polity</a>
@@ -98,131 +169,82 @@
 </nav>
 
 <div class="container">
+
     <div class="card">
         <h2>📚 General Studies Modules</h2>
         <p>Click a module to view handwritten notes:</p>
-        
+
         <div class="grid-menu">
             <div class="grid-item">📍 Jharkhand Map</div>
             <div class="grid-item">🌳 State Wildlife</div>
             <div class="grid-item">🏛️ Admin Setup</div>
-            <div class="grid-item" onclick="toggleNotes()">📜 SPT/CNT Act</div>
+            <div class="grid-item" onclick="openCNT()">📜 SPT / CNT Act</div>
         </div>
 
         <div id="cnt-notes">
             <div class="notebook">
-                <h3 style="margin-top:0; font-family: Georgia, serif;">
-     Notes: Chotanagpur Tenancy Act, 1908 (CNT Act)
-</h3>
 
-<div class="section-title">📌 Overview</div>
-<div style="line-height:30px;">
-    • The <span class="highlight">Chotanagpur Tenancy Act, 1908</span>.<br>
-    • Enacted to <span class="highlight">protect the interest of aboriginals (tribals)</span> residing in Chotanagpur region.<br>
-    • The Act contains <span class="highlight">19 Chapters, 271 Sections and 2 Schedules</span>.
-</div>
+                <h2>CNT Act 1908 – Free Handwritten Notes for JPSC</h2>
 
-<div class="section-title">📍 Area of Operation</div>
-<div style="line-height:30px;">
-    Covers <span class="highlight">four divisions</span>:<br>
-    1️⃣ Palamu<br>
-    2️⃣ Kolhan<br>
-    3️⃣ North Chotanagpur (Hazaribagh)<br>
-    4️⃣ South Chotanagpur (Ranchi)
-</div>
+                <div class="section-title">📌 Overview</div>
+                <div style="line-height:30px;">
+                    • The <span class="highlight">Chotanagpur Tenancy Act, 1908</span>.<br>
+                    • Enacted to protect <span class="highlight">tribal land rights</span>.<br>
+                    • Contains <span class="highlight">19 Chapters, 271 Sections & 2 Schedules</span>.
+                </div>
 
-<div class="section-title"><span class="badge">Chapter I</span> Sections 1 to 4</div>
-<div style="line-height:30px;">
-    • Identity of the Act<br>
-    • Area of operation<br>
-    • Repeal of earlier tenancy laws<br>
-    • Important definitions
-</div>
+                <div class="section-title">📍 Area of Operation</div>
+                <div style="line-height:30px;">
+                    1️⃣ Palamu<br>
+                    2️⃣ Kolhan<br>
+                    3️⃣ North Chotanagpur (Hazaribagh)<br>
+                    4️⃣ South Chotanagpur (Ranchi)
+                </div>
 
-<div class="section-title"><span class="badge">Section 1</span> Short Title & Extent</div>
-<div style="line-height:30px;">
-    <b>Name:</b> Chotanagpur Tenancy Act, 1908.<br>
-    <b>Extent:</b> North Chotanagpur, South Chotanagpur & Palamu divisions.<br>
-    <b>Includes:</b> Municipal areas, notified areas committees & cantonment areas.
-</div>
+                <div class="section-title"><span class="badge">Chapter I</span> Sections 1–4</div>
+                <div style="line-height:30px;">
+                    • Identity of Act<br>
+                    • Area of operation<br>
+                    • Repeal of earlier laws<br>
+                    • Definitions
+                </div>
 
-<div class="section-title"><span class="badge">Section 2</span> Repeal of Earlier Laws</div>
-<div style="line-height:30px;">
-    • Repeals earlier tenancy laws in Chotanagpur.<br>
-    • <b>Schedule A:</b> General repeal in Chotanagpur.<br>
-    • <b>Schedule B:</b> Area-specific repeal (Dhanbad & certain police station areas).
-</div>
+                <div class="section-title">🎯 JPSC Exam Focus</div>
+                <div style="line-height:30px;">
+                    • Highly important for Prelims<br>
+                    • Frequently asked in Mains<br>
+                    • Tribal land protection is key theme
+                </div>
 
-<div class="section-title"><span class="badge">Section 3</span> Definitions</div>
-<div style="line-height:30px;">
-    <b>Holding:</b> A parcel or parcels of land held by a raiyat forming a separate tenancy.<br><br>
+                <div class="card" style="margin-top:25px; border-top:5px solid #27ae60;">
+                    <h3>🔒 Want Full CNT Act Notes (PDF)?</h3>
+                    <p>
+                        ✔ Complete chapters<br>
+                        ✔ Land transfer rules<br>
+                        ✔ PYQ-based notes<br>
+                        ✔ MCQs + Revision sheets
+                    </p>
+                    <p><b>Price:</b> ₹99 only</p>
+                    <p>(Payment link will be added)</p>
+                </div>
 
-    <b>Korkar:</b> Land artificially levelled or embanked primarily for cultivation of rice.<br><br>
+            </div>
+        </div>
+    </div>
 
-    <b>Landlord:</b> Person immediately under whom a tenant holds land and includes the Government.<br><br>
-
-    <b>Mundari Khunt-Kattidar Tenancy:</b> Interest of a Mundari Khunt-Kattidar.<br><br>
-
-    <b>Permanent Tenure:</b> A tenure which is heritable and not held for a limited time.<br><br>
-
-    <b>Proprietor:</b> A person owning land, whether in trust or for own benefit, as estate or part of estate.<br><br>
-
-    <b>Rent:</b> Whatever is lawfully payable in money or kind by a tenant to landlord for use or occupation of land, excluding personal service.<br><br>
-
-    <b>Tenant:</b> A person who holds land under another and is liable to pay rent for that land.<br><br>
-
-    <b>Tenure:</b> Interest of a tenure-holder including under-tenure, but excluding Mundari Khunt-Kattidari tenancy.<br><br>
-
-    <b>Village Headman:</b> Headman of a village or group of villages, known as <span class="highlight">Manki, Manjhi, Pradhan</span> or equivalent such as <span class="highlight">Tikkadar or Ijardaar</span>.
-</div>
-
-<div class="section-title"><span class="badge">Section 4</span> Classes of Tenants</div>
-<div style="line-height:30px;">
-    <b>1️⃣ Tenure-holders</b> (including under-tenure holders).<br><br>
-
-    <b>2️⃣ Raiyats (Cultivating tenants)</b><br>
-    (a) <b>Occupancy Raiyats:</b><br>
-    → Have right of occupancy.<br>
-    → Usually after <span class="highlight">12 years of continuous holding</span>.<br><br>
-
-    (b) <b>Non-Occupancy Raiyats:</b><br>
-    → Do not have occupancy rights.<br>
-    → Temporary tenants.<br><br>
-
-    (c) <b>Raiyats having Khunt-Katti rights</b>.<br><br>
-
-    <b>3️⃣ Under-Raiyats:</b><br>
-    → Tenants under a raiyat.<br>
-    → Cultivate land indirectly.<br><br>
-
-    <b>4️⃣ Mundari Khunt-Kattidars:</b><br>
-    → Mundari who cleared jungle land.<br>
-    → Made land fit for cultivation.<br>
-    → Includes their descendants in the male line.
-</div>
-
-<div class="section-title">🎯 JPSC Exam Focus</div>
-<div style="line-height:30px;">
-    • CNT Act is a <span class="highlight">tribal protective land law</span>.<br>
-    • Sections 3 & 4 are <span class="highlight">highly important for Prelims</span>.<br>
-    • Khunt-Katti & Mundari system frequently asked in <span class="highlight">JPSC Mains</span>.
 </div>
 
 <div class="footer">
-  © 2026 Harshit GS Academy. All Rights Reserved.  
-  <br>
-  Content protected under the Copyright Act, 1957 (India).
+    © 2026 Harshit GS Academy. All Rights Reserved.<br>
+    Content protected under the Copyright Act, 1957 (India).
 </div>
 
 <script>
-    function toggleNotes() {
-        var x = document.getElementById("cnt-notes");
-        if (x.style.display === "none" || x.style.display === "") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
+function openCNT() {
+    var x = document.getElementById("cnt-notes");
+    x.style.display = "block";
+    x.scrollIntoView({ behavior: "smooth" });
+}
 </script>
 
 </body>
