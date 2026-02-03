@@ -18,35 +18,40 @@
         }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: var(--light); color: #333; }
         
-        /* Attractive Header */
         header.main-header { 
             background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-            color: white; 
-            padding: 40px 20px; 
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            color: white; padding: 40px 20px; text-align: center;
         }
         
-        /* Navigation Bar */
         nav { background: #333; overflow: auto; white-space: nowrap; padding: 10px; text-align: center; }
         nav a { color: white; padding: 10px 20px; text-decoration: none; font-weight: bold; display: inline-block; }
-        nav a:hover { color: var(--secondary); }
 
         .container { max-width: 900px; margin: 20px auto; padding: 15px; }
 
-        /* Content Cards */
         .card { 
-            background: white; 
-            padding: 20px; 
-            margin-bottom: 20px; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            background: white; padding: 20px; margin-bottom: 20px; 
+            border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             border-top: 5px solid var(--primary);
         }
         
-        .news-card { border-top: 5px solid var(--secondary); background: #fffdf9; }
+        /* Grid Menu Styling */
+        .grid-menu { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
+        .grid-item { 
+            background:#eef2f7; padding:15px; border-radius:8px; 
+            font-weight: bold; color: var(--primary); text-align: center;
+            cursor: pointer; transition: 0.3s; border: 1px solid transparent;
+        }
+        .grid-item:hover { background: var(--secondary); color: white; }
+        .grid-item.active { border: 2px solid var(--primary); background: #dce4ed; }
 
-        /* Notebook Style for Notes */
+        /* Hidden Notebook Content */
+        #cnt-notes { display: none; margin-top: 20px; animation: fadeIn 0.5s; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .notebook {
             background-color: var(--paper);
             background-image: linear-gradient(var(--line) 1px, transparent 1px);
@@ -55,15 +60,11 @@
             border-left: 5px solid var(--margin);
             border-radius: 8px;
             box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
-            margin-top: 15px;
         }
 
         .section-title { color: var(--blue-ink); font-weight: bold; margin-top: 20px; text-decoration: underline; }
         .highlight { background: rgba(255, 235, 59, 0.5); padding: 2px 5px; border-radius: 3px; }
         .badge { display: inline-block; background: var(--ink); color: white; padding: 0 8px; border-radius: 10px; font-size: 0.8rem; }
-
-        .grid-menu { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
-        .grid-item { background:#eef2f7; padding:15px; border-radius:8px; font-weight: bold; color: var(--primary); }
 
         .footer { text-align: center; padding: 30px; color: #888; font-size: 0.9rem; }
     </style>
@@ -84,53 +85,35 @@
 </nav>
 
 <div class="container">
-    <div class="card news-card">
-        <h2>🔥 Today's Current Affairs: Feb 4, 2026</h2>
-        <ul style="line-height: 1.8;">
-            <li><strong>Jharkhand Railway Budget:</strong> Massive allocation of ₹7,306 Crore for state infrastructure.</li>
-            <li><strong>JPSC Update:</strong> Focus on CNT/SPT Acts for upcoming Prelims.</li>
-        </ul>
-    </div>
-
     <div class="card">
         <h2>📚 General Studies Modules</h2>
-        <p>Simplified hand-written style notes for Jharkhand Special:</p>
+        <p>Click a module to view handwritten notes:</p>
         
         <div class="grid-menu">
             <div class="grid-item">📍 Jharkhand Map</div>
             <div class="grid-item">🌳 State Wildlife</div>
             <div class="grid-item">🏛️ Admin Setup</div>
-            <div class="grid-item">📜 SPT/CNT Act</div>
+            <div class="grid-item" onclick="toggleNotes()">📜 SPT/CNT Act</div>
         </div>
 
-        <div class="notebook">
-            <h3 style="margin-top:0; font-family: Georgia, serif;">Handwritten Notes: CNT Act 1908</h3>
-            <p style="font-size: 0.9rem; color: #666;">Subject: Preliminary (Chapter 1)</p>
-            
-            <div class="section-title"><span class="badge">Sec 1</span> Title & Reach</div>
-            <div style="line-height: 30px;">
-                Covers 4 Divisions: <span class="highlight">N. Chotanagpur, S. Chotanagpur, Palamu, Kolhan</span>.<br>
-                Total 18 Districts. (Does not apply to Municipalities).
-            </div>
+        <div id="cnt-notes">
+            <div class="notebook">
+                <h3 style="margin-top:0; font-family: Georgia, serif;">Handwritten Notes: CNT Act 1908</h3>
+                <div class="section-title"><span class="badge">Sec 1</span> Title & Reach</div>
+                <div style="line-height: 30px;">
+                    Covers: <span class="highlight">N. Chotanagpur, S. Chotanagpur, Palamu, Kolhan</span>.
+                </div>
 
-            <div class="section-title"><span class="badge">Sec 2</span> Repeal of Laws</div>
-            <div style="line-height: 30px;">
-                Merged old fragmented laws to make one unified law.
-            </div>
+                <div class="section-title"><span class="badge">Sec 3</span> Definitions</div>
+                <div style="line-height: 30px;">
+                    • <span class="highlight">Agri Year:</span> Starts 1st Baisakh.<br>
+                    • <span class="highlight">Korkar:</span> Jungle land cleared for rice.
+                </div>
 
-            <div class="section-title"><span class="badge">Sec 3</span> Definitions (V. Imp)</div>
-            <div style="line-height: 30px;">
-                • <span class="highlight">Agriculture Year:</span> Starts 1st Baisakh.<br>
-                • <span class="highlight">Korkar:</span> Jungle land cleared for rice.<br>
-                • <span class="highlight">Bhuinhari:</span> Descendants of original founders.
-            </div>
-
-            <div class="section-title"><span class="badge">Sec 4</span> Classes of Tenants</div>
-            <div style="line-height: 30px;">
-                1. <b>Tenure-holders</b> (Middlemen)<br>
-                2. <b>Raiyats</b> (Actual Farmers)<br>
-                3. <b>Under-raiyats</b> (Sub-tenants)<br>
-                4. <b>Mundari-Khuntkattidars</b> (Ancestral)
+                <div class="section-title"><span class="badge">Sec 4</span> Classes of Tenants</div>
+                <div style="line-height: 30px;">
+                    1. Tenure-holders | 2. Raiyats | 3. Under-raiyats | 4. Mundari-Khuntkattidars
+                </div>
             </div>
         </div>
     </div>
@@ -140,6 +123,17 @@
     Designed for Students by Harshit (Chotu Babu)<br>
     &copy; 2026 GS Academy
 </div>
+
+<script>
+    function toggleNotes() {
+        var x = document.getElementById("cnt-notes");
+        if (x.style.display === "none" || x.style.display === "") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
 
 </body>
 </html>
