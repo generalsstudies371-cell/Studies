@@ -5,46 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harshit GS Academy</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; margin: 0; color: #333; background-color: #f4f4f9; }
-        header { background: #2c3e50; color: white; padding: 2rem; text-align: center; }
-        nav { background: #34495e; color: white; padding: 10px; text-align: center; sticky: top; }
-        .container { max-width: 800px; margin: 20px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .news-box { border-left: 5px solid #e74c3c; background: #fff5f5; padding: 15px; margin-bottom: 20px; }
-        h2 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .footer { text-align: center; padding: 20px; font-size: 0.8rem; color: #777; }
+        :root {
+            --primary: #1a2a6c;
+            --secondary: #f2994a;
+            --accent: #27ae60;
+            --light: #f8f9fa;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: var(--light); color: #333; }
+        
+        /* Attractive Header */
+        header { 
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white; 
+            padding: 40px 20px; 
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        /* Navigation Bar */
+        nav { background: #333; overflow: auto; white-space: nowrap; padding: 10px; }
+        nav a { color: white; padding: 10px 20px; text-decoration: none; font-weight: bold; display: inline-block; }
+        nav a:hover { color: var(--secondary); }
+
+        .container { max-width: 900px; margin: 20px auto; padding: 15px; }
+
+        /* Modern Content Cards */
+        .card { 
+            background: white; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--primary);
+        }
+        
+        .news-card { border-top: 5px solid var(--secondary); background: #fffdf9; }
+
+        h2 { color: var(--primary); margin-top: 0; }
+        
+        /* Colorful Button */
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+        }
+
+        .footer { text-align: center; padding: 30px; color: #888; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Harshit GS Academy</h1>
-    <p>Your Daily Hub for General Studies & Current Affairs</p>
+    <h1>HARSHIT GS ACADEMY</h1>
+    <p>Target JPSC & Competitive Exams</p>
 </header>
 
 <nav>
-    History | Geography | Polity | Economy
+    <a href="#">🏠 Home</a>
+    <a href="#">📖 History</a>
+    <a href="#">🌍 Geography</a>
+    <a href="#">⚖️ Polity</a>
+    <a href="#">📈 Current Affairs</a>
 </nav>
 
 <div class="container">
-    <div class="news-box">
-        <h3>🔥 Daily Current Affairs: Feb 3, 2026</h3>
-        <p>Update your notes with today's top headlines and analysis for your upcoming exams.</p>
+    <div class="card news-card">
+        <h2>🔥 Today's Current Affairs</h2>
+        <p><strong>Feb 3, 2026:</strong> New updates on Jharkhand's industrial policy and latest appointments. Don't miss these for your prelims!</p>
+        <a href="#" class="btn">Start Daily Quiz</a>
     </div>
 
-    <h2>General Studies Modules</h2>
-    <p>Welcome, students! Here you will find detailed notes on Jharkhand geography, administrative policies, and more.</p>
-    
-    <ul>
-        <li><strong>Geography:</strong> Understanding state boundaries and districts.</li>
-        <li><strong>Economy:</strong> Lac and Silk production in Jharkhand.</li>
-        <li><strong>Polity:</strong> Important Tenancy Acts (CNT/SPT).</li>
-    </ul>
+    <div class="card">
+        <h2>📚 General Studies Modules</h2>
+        <p>Simplified notes for your preparation:</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div style="background:#eef2f7; padding:10px; border-radius:8px;">📍 Jharkhand Map Study</div>
+            <div style="background:#eef2f7; padding:10px; border-radius:8px;">📜 CNT/SPT Act Basics</div>
+            <div style="background:#eef2f7; padding:10px; border-radius:8px;">🌳 State Wildlife</div>
+            <div style="background:#eef2f7; padding:10px; border-radius:8px;">🏛️ Administrative Setup</div>
+        </div>
+    </div>
 </div>
 
 <div class="footer">
-    &copy; 2026 Harshit (Chotu Babu) Academy
+    Designed for Students by Harshit (Chotu Babu)<br>
+    &copy; 2026 GS Academy
 </div>
 
 </body>
 </html>
-
