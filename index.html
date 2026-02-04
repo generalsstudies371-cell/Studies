@@ -373,6 +373,22 @@ function toggleCNT(){
   if(x.style.display==="block") x.scrollIntoView({behavior:"smooth"});
 }
 </script>
+<script>
+function openModule(id) {
+  var modules = document.querySelectorAll('.module');
+  modules.forEach(m => m.style.display = 'none');
 
+  if (id === 'cnt') {
+    openCNT();
+    return;
+  }
+
+  var el = document.getElementById(id);
+  if (el) {
+    el.style.display = 'block';
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+}
+</script>
 </body>
 </html>
