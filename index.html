@@ -3,274 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JPSC Notes & Syllabus | Harshit GS Academy</title>
-
-    <meta name="author" content="Harshit GS Academy">
-    <meta name="copyright" content="© 2026 Harshit GS Academy">
-
+    <title>JPSC Study Hub | CNT Act 1908</title>
     <style>
         :root {
-            --primary: #1a2a6c;
-            --secondary: #f2994a;
-            --accent: #27ae60;
-            --light: #f8f9fa;
-            --ink: #1a1a1a;
-            --blue-ink: #0047ab;
-            --paper: #fffef0;
-            --margin: #ff7070;
-            --line: #e0eaf5;
+            --primary-blue: #2c3e50;
+            --accent-orange: #e67e22;
+            --light-bg: #f4f7f6;
+            --text-dark: #333;
         }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text-dark); background-color: var(--light-bg); padding: 0; margin: 0; }
+        header { background: var(--primary-blue); color: white; padding: 2rem; text-align: center; border-bottom: 5px solid var(--accent-orange); }
+        .container { max-width: 900px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h2 { color: var(--primary-blue); border-left: 5px solid var(--accent-orange); padding-left: 15px; margin-top: 2rem; }
+        
+        /* Table Styling */
+        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+        th { background-color: var(--primary-blue); color: white; padding: 12px; text-align: left; }
+        td { border: 1px solid #ddd; padding: 12px; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            background: var(--light);
-            color: #333;
-        }
-
-        header.main-header {
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        nav {
-            background: #333;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 15px;
-        }
-
-        .card {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 5px solid var(--primary);
-        }
-
-        .cta-btn {
-            display: block;
-            margin: 20px auto;
-            padding: 14px 22px;
-            background: var(--accent);
-            color: white;
-            border-radius: 10px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .telegram-btn {
-            display: block;
-            margin: 10px auto 25px;
-            padding: 12px 20px;
-            background: #0088cc;
-            color: white;
-            border-radius: 8px;
-            font-weight: bold;
-            text-align: center;
-            width: fit-content;
-            text-decoration: none;
-        }
-
-        .grid-menu {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .grid-item {
-            background: #eef2f7;
-            padding: 15px;
-            border-radius: 8px;
-            font-weight: bold;
-            color: var(--primary);
-            text-align: center;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .grid-item:hover {
-            background: var(--secondary);
-            color: white;
-        }
-
-        #cnt-notes {
-            display: none;
-            margin-top: 20px;
-            animation: fadeIn 0.5s;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .notebook {
-            background-color: var(--paper);
-            background-image: linear-gradient(var(--line) 1px, transparent 1px);
-            background-size: 100% 30px;
-            padding: 30px 20px 20px 40px;
-            border-left: 5px solid var(--margin);
-            border-radius: 8px;
-        }
-
-        .section-title {
-            color: var(--blue-ink);
-            font-weight: bold;
-            margin-top: 20px;
-            text-decoration: underline;
-        }
-
-        .highlight {
-            background: rgba(255, 235, 59, 0.5);
-            padding: 2px 5px;
-            border-radius: 3px;
-        }
-
-        .badge {
-            display: inline-block;
-            background: var(--ink);
-            color: white;
-            padding: 0 8px;
-            border-radius: 10px;
-            font-size: 0.8rem;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 30px;
-            color: #777;
-            font-size: 0.9rem;
-        }
+        /* Hierarchy List */
+        .hierarchy-box { background: #fff3e0; border: 1px solid #ffe0b2; padding: 1.5rem; border-radius: 8px; margin-top: 1rem; }
+        .direction { font-size: 1.2rem; font-weight: bold; color: var(--accent-orange); text-align: center; margin-bottom: 1rem; }
+        
+        /* Highlight Box */
+        .exam-tip { background: #e8f4fd; border-left: 5px solid #3498db; padding: 1rem; margin: 1rem 0; font-style: italic; }
+        
+        footer { text-align: center; padding: 2rem; color: #777; font-size: 0.9rem; }
     </style>
 </head>
-
 <body>
 
-<header class="main-header">
-    <h1>HARSHIT GS ACADEMY</h1>
-    <p>Target JPSC & Competitive Exams</p>
-    <p style="font-size:16px;">
-        Free, exam-focused handwritten notes for <b>JPSC (Jharkhand)</b>
-    </p>
+<header>
+    <h1>Chota Nagpur Tenancy (CNT) Act, 1908</h1>
+    <p>Essential Notes for JPSC Paper II (Jharkhand GS)</p>
 </header>
 
-<button class="cta-btn" onclick="openCNT()">📘 Read Free CNT Act Notes (JPSC)</button>
-
-<a href="https://t.me/HarshitGSAcademy" target="_blank" class="telegram-btn">
-📲 Join Free JPSC Notes on Telegram
-</a>
-
-<nav>
-    <a href="#">🏠 Home</a>
-    <a href="#exam">📝 Exam</a>
-    <a href="#syllabus">📘 Syllabus</a>
-    <a href="#notes">📚 Notes</a>
-</nav>
-
 <div class="container">
+    
+    <h2>1. Important Legal Definitions (Section 3)</h2>
+    <table>
+        <tr>
+            <th>Term</th>
+            <th>Legal Explanation</th>
+        </tr>
+        <tr>
+            <td><strong>Mundari Khunt-Kattidari</strong></td>
+            <td>The interest of a Mundari Khunt-Kattidar.</td>
+        </tr>
+        <tr>
+            <td><strong>Permanent Tenure</strong></td>
+            <td>A heritable tenure not held for a limited time.</td>
+        </tr>
+        <tr>
+            <td><strong>Proprietor</strong></td>
+            <td>A person owning an estate (in trust or for own benefit).</td>
+        </tr>
+        <tr>
+            <td><strong>Rent</strong></td>
+            <td>Lawful payment (money/kind) by a tenant to a landlord; excludes personal service.</td>
+        </tr>
+        <tr>
+            <td><strong>Tenant</strong></td>
+            <td>A person who holds land under another and is liable to pay rent.</td>
+        </tr>
+        <tr>
+            <td><strong>Tenure</strong></td>
+            <td>Interest of a tenure-holder; excludes Mundari Khunt-Kattidari tenancy.</td>
+        </tr>
+        <tr>
+            <td><strong>Village Headman</strong></td>
+            <td>Known as Manki, Pradhan, Manjhi, Thikadar, or Ijardar.</td>
+        </tr>
+    </table>
 
-    <!-- EXAM SECTION -->
-    <div class="card" id="exam">
-        <h2>📝 JPSC Examination</h2>
-        <p>
-            Jharkhand Public Service Commission (JPSC) conducts examinations
-            for recruitment to various state services.
-        </p>
+    <div class="exam-tip">
+        <strong>JPSC Tip:</strong> Remember that "Tenure" explicitly excludes Mundari Khunt-Kattidari. This is a frequent MCQ topic!
     </div>
 
-    <!-- SYLLABUS SECTION -->
-    <div class="card" id="syllabus">
-        <h2>📘 JPSC Preliminary Examination Syllabus</h2>
-        <p>
-            The Preliminary Examination consists of <b>two papers</b>:
-            <b>Paper I – General Studies</b> and
-            <b>Paper II – Jharkhand Specific General Studies</b>.
-        </p>
-
-        <h3>🟦 Paper I – General Studies</h3>
+    <h2>2. Classes of Tenants (Section 4)</h2>
+    <div class="hierarchy-box">
+        <div class="direction">Hierarchy: Proprietor &rarr; Tenure-holder &rarr; Raiyat &rarr; Under-Raiyat</div>
         <ul>
-            <li>History of India (Ancient, Medieval, Modern)</li>
-            <li>Geography of India</li>
-            <li>Economic & Sustainable Development</li>
-            <li>Indian Polity & Governance</li>
-            <li>General Science, Technology & Agriculture</li>
-            <li>National & International Current Affairs</li>
-            <li>Miscellaneous General Questions</li>
-        </ul>
-
-        <h3>🟦 Paper II – Jharkhand Specific General Studies</h3>
-        <ul>
-            <li>History of Jharkhand & Jharkhand Movement</li>
-            <li>Jharkhand Society, Culture & Tribal Heritage</li>
-            <li>Jharkhand Literature, Dance, Music & Art</li>
-            <li>Tourist Places & Heritage</li>
-            <li>Education, Sports</li>
-            <li>Land Related Laws (CNT / SPT)</li>
-            <li>Industries & Natural Resources</li>
+            <li><strong>1. Tenure-holder:</strong> Includes under-tenure holders.</li>
+            <li><strong>2. Raiyat (Cultivating Tenants):</strong>
+                <ul>
+                    <li><strong>Occupancy Raiyats:</strong> Rights gained usually after 12 years.</li>
+                    <li><strong>Non-occupancy Raiyats:</strong> Temporary tenants.</li>
+                    <li><strong>Raiyats with Khunt-Katti rights:</strong> Special ancestral rights.</li>
+                </ul>
+            </li>
+            <li><strong>3. Under-Raiyat:</strong> Holds land indirectly under a Raiyat.</li>
+            <li><strong>4. Mundari Khunt-Kattidar:</strong> Male descendants of the original jungle clearers.</li>
         </ul>
     </div>
 
-    <!-- NOTES / MODULES -->
-    <div class="card" id="notes">
-        <h2>📚 General Studies Modules</h2>
-        <p>Click a module to view handwritten notes:</p>
+    
 
-        <div class="grid-menu">
-            <div class="grid-item">📍 Jharkhand Map</div>
-            <div class="grid-item">🌳 State Wildlife</div>
-            <div class="grid-item">🏛️ Admin Setup</div>
-            <div class="grid-item" onclick="openCNT()">📜 SPT / CNT Act</div>
-        </div>
-
-        <div id="cnt-notes">
-            <div class="notebook">
-                <h2>📘 CNT Act 1908 – Handwritten Notes</h2>
-                <p>
-                    CNT Act is a <span class="highlight">tribal land protection law</span>
-                    applicable to the Chotanagpur region of Jharkhand.
-                </p>
-            </div>
-        </div>
+    <h2>3. Today's GS & Current Affairs Updates</h2>
+    <div class="exam-tip">
+        <strong>Update (Feb 4, 2026):</strong> [Enter your daily update here regarding Jharkhand land laws or GS news].
     </div>
 
 </div>
 
-<div class="footer">
-    © 2026 Harshit GS Academy. All Rights Reserved.<br>
-    Content protected under the Copyright Act, 1957 (India).
-</div>
-
-<script>
-function openCNT() {
-    var x = document.getElementById("cnt-notes");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-        x.scrollIntoView({ behavior: "smooth" });
-    }
-}
-</script>
+<footer>
+    &copy; 2026 JPSC Preparation Portal | Built for GS Teaching
+</footer>
 
 </body>
 </html>
