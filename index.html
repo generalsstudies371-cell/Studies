@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JPSC Notes & Syllabus | Harshit GS Academy</title>
+<title>CNT Act 1908 Notes | Harshit GS Academy</title>
 
 <meta name="author" content="Harshit GS Academy">
 <meta name="copyright" content="© 2026 Harshit GS Academy">
@@ -13,7 +13,6 @@
   --blue:#1e3c72;
   --orange:#f2994a;
   --green:#27ae60;
-  --purple:#6a1b9a;
   --light:#f4f6fb;
   --paper:#fffdf2;
   --ink:#222;
@@ -38,26 +37,9 @@ header h1{margin:0;font-size:2rem;}
 header p{margin:6px 0;}
 header a{color:#ffeb3b;font-weight:bold;text-decoration:none;}
 
-/* NAV */
-nav{
-  background:#111;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  text-align:center;
-}
-nav a{
-  color:white;
-  padding:12px 18px;
-  display:inline-block;
-  font-weight:bold;
-  text-decoration:none;
-}
-nav a:hover{background:#333;}
-
 /* LAYOUT */
 .container{
-  max-width:950px;
+  max-width:900px;
   margin:20px auto;
   padding:15px;
 }
@@ -65,95 +47,29 @@ nav a:hover{background:#333;}
 .card{
   background:white;
   border-radius:14px;
-  padding:20px;
+  padding:22px;
   margin-bottom:22px;
   box-shadow:0 6px 20px rgba(0,0,0,0.06);
 }
 
-/* BUTTONS */
+/* BUTTON */
 .btn{
   display:block;
-  max-width:300px;
-  margin:15px auto;
+  max-width:320px;
+  margin:20px auto;
   padding:14px;
   border-radius:12px;
   font-size:16px;
   font-weight:bold;
   border:none;
   cursor:pointer;
-}
-.btn-green{background:var(--green);color:white;}
-.btn-telegram{
-  background:#0088cc;
+  background:var(--green);
   color:white;
-  text-align:center;
-  text-decoration:none;
-  display:block;
-  max-width:320px;
-  margin:10px auto 25px;
-  padding:14px;
-  border-radius:12px;
-  font-weight:bold;
 }
 
-/* HEADINGS */
-.section-main{
-  text-align:center;
-  font-size:1.6rem;
-  color:var(--blue);
-  margin-bottom:10px;
-}
-.badge{
-  display:inline-block;
-  padding:4px 10px;
-  background:#000;
-  color:white;
-  border-radius:10px;
-  font-size:0.75rem;
-}
-
-/* SYLLABUS */
-.paper{
-  margin-top:20px;
-}
-.paper-title{
-  background:var(--blue);
-  color:white;
-  padding:12px;
-  border-radius:10px;
-  font-weight:bold;
-  text-align:center;
-  font-size:1.1rem;
-}
-.paper-title.green{background:var(--green);}
-
-.topic{
-  border-left:5px solid var(--orange);
-  background:#fffaf2;
-  padding:12px 15px;
-  margin-top:12px;
-  border-radius:0 10px 10px 0;
-}
-.topic h3{margin:0 0 6px 0;color:var(--blue);}
-
-/* MODULE GRID */
-
-<div class="grid-menu">
-
-  <div class="grid-item" onclick="openModule('history')">🏺 History</div>
-  <div class="grid-item" onclick="openModule('polity')">⚖️ Polity</div>
-  <div class="grid-item" onclick="openModule('economy')">💹 Economy</div>
-  <div class="grid-item" onclick="openModule('geography')">🌍 Geography</div>
-
-  <div class="grid-item" onclick="openModule('science')">🧬 Science & Tech</div>
-  <div class="grid-item" onclick="openModule('current')">📰 Current Affairs</div>
-  <div class="grid-item" onclick="openModule('jharkhand')">🏞️ Jharkhand GS</div>
-  <div class="grid-item" onclick="openModule('cnt')">📜 CNT / SPT Act</div>
-
-</div>
-  
-/* NOTEBOOK */
+/* NOTEBOOK STYLE */
 #cnt-notes{display:none;margin-top:20px;}
+
 .notebook{
   background:var(--paper);
   background-image:linear-gradient(var(--line) 1px,transparent 1px);
@@ -163,11 +79,14 @@ nav a:hover{background:#333;}
   border-radius:12px;
   line-height:32px;
 }
-.note-title{
-  font-family:Georgia,serif;
-  font-size:1.4rem;
-  margin-top:0;
+
+.section-title{
+  margin-top:22px;
+  font-weight:bold;
+  color:var(--blue);
+  text-decoration:underline;
 }
+
 .highlight{
   background:#fff176;
   padding:2px 6px;
@@ -188,207 +107,124 @@ footer{
 
 <header>
   <h1>HARSHIT GS ACADEMY</h1>
-  <p>Target 🎯 JPSC & Jharkhand Exams</p>
-  <a href="https://t.me/HarshitGSAcademy" target="_blank">📲 Join Telegram for Free PDFs</a>
+  <p>Chotanagpur Tenancy Act, 1908 – JPSC Notes</p>
+  <a href="https://t.me/HarshitGSAcademy" target="_blank">
+    📲 Join Telegram for Free PDFs
+  </a>
 </header>
-
-<nav>
-  <a href="#exam">📝 Exam</a>
-  <a href="#syllabus">📘 Syllabus</a>
-  <a href="#notes">📚 Notes</a>
-</nav>
 
 <div class="container">
 
-<button class="btn btn-green" onclick="toggleCNT()">📘 Open CNT Act Handwritten Notes</button>
-<a class="btn-telegram" href="https://t.me/HarshitGSAcademy" target="_blank">🚀 Free Notes on Telegram</a>
-
-<!-- SYLLABUS -->
-<div class="card" id="syllabus">
-<h2 class="section-main">📘 JPSC PRELIMS SYLLABUS</h2>
-
-<div class="paper">
-<div class="paper-title">🟦 PAPER I – GENERAL STUDIES</div>
-
-<div class="topic">
-<h3>🏺 History of India</h3>
-Ancient • Medieval • Modern India
-</div>
-
-<div class="topic">
-<h3>🌍 Geography of India</h3>
-General • Physical • Economic • Social & Demographic
-</div>
-
-<div class="topic">
-<h3>💹 Economy & Sustainable Development</h3>
-Basic Economy • Sustainable Development • Issues
-</div>
-
-<div class="topic">
-<h3>⚖️ Polity & Governance</h3>
-Constitution • Public Administration • Panchayats • Municipalities
-</div>
-
-<div class="topic">
-<h3>🔬 Science, Tech & Agriculture</h3>
-General Science • IT • Agriculture
-</div>
-</div>
-
-<div class="paper">
-<div class="paper-title green">🟩 PAPER II – JHARKHAND SPECIFIC</div>
-
-<div class="topic">
-<h3>🏞️ History & Identity</h3>
-Jharkhand History • Movement • Identity
-</div>
-
-<div class="topic">
-<h3>📚 Culture & Society</h3>
-Literature • Tribal Culture • Dance • Music • Instruments
-</div>
-
-<div class="topic">
-<h3>⚖️ Laws, Economy & Resources</h3>
-<b>CNT / SPT Acts</b> • Industries • Natural Resources
-</div>
-</div>
-</div>
-
-<!-- NOTES -->
-<div class="card" id="notes">
-<h2 class="section-main">📚 GS MODULES</h2>
-
-<div class="grid">
-<div>🗺️ Jharkhand Map</div>
-<div>🌳 Wildlife</div>
-<div>🏛️ Admin Setup</div>
-<div onclick="toggleCNT()">📜 CNT / SPT Act</div>
-</div>
+<button class="btn" onclick="toggleCNT()">📘 Open CNT Act Full Notes</button>
 
 <div id="cnt-notes">
+
 <!-- ================= CNT ACT FULL NOTES START ================= -->
-<div class="card" id="cnt-full-notes">
 
-  <h2 style="text-align:center; font-family:Georgia, serif;">
-    📘 The Chotanagpur Tenancy Act, 1908 (CNT Act)
-  </h2>
+<div class="card">
+<h2 style="text-align:center; font-family:Georgia, serif;">
+📘 The Chotanagpur Tenancy Act, 1908 (CNT Act)
+</h2>
 
-  <div class="notebook">
+<div class="notebook">
 
-    <h3 class="section-title">📌 Overview</h3>
-    <p>
-      The <b>Chotanagpur Tenancy Act, 1908</b> was enacted to
-      <span class="highlight">protect the interests of aboriginals (tribals)</span>
-      residing in the Chotanagpur region.
-    </p>
-    <ul>
-      <li>Total Chapters: <b>19</b></li>
-      <li>Total Sections: <b>271</b></li>
-      <li>Total Schedules: <b>2</b></li>
-    </ul>
+<h3 class="section-title">📌 Overview</h3>
+<p>
+The <b>Chotanagpur Tenancy Act, 1908</b> was enacted to
+<span class="highlight">protect the interests of aboriginals (tribals)</span>
+residing in the Chotanagpur region.
+</p>
+<ul>
+<li>Total Chapters: <b>19</b></li>
+<li>Total Sections: <b>271</b></li>
+<li>Total Schedules: <b>2</b></li>
+</ul>
 
-    <h3 class="section-title">📍 Area of Operation</h3>
-    <ul>
-      <li>Palamu</li>
-      <li>Kolhan (HQ: Chaibasa)</li>
-      <li>North Chotanagpur (HQ: Hazaribagh)</li>
-      <li>South Chotanagpur (HQ: Ranchi)</li>
-    </ul>
+<h3 class="section-title">📍 Area of Operation</h3>
+<ul>
+<li>Palamu</li>
+<li>Kolhan (HQ: Chaibasa)</li>
+<li>North Chotanagpur (HQ: Hazaribagh)</li>
+<li>South Chotanagpur (HQ: Ranchi)</li>
+</ul>
 
-    <h3 class="section-title">📖 Chapter I (Sections 1–4)</h3>
-    <ul>
-      <li>Identity of the Act</li>
-      <li>Area of operation</li>
-      <li>Repeal of earlier tenancy laws</li>
-      <li>Definitions</li>
-    </ul>
+<h3 class="section-title">📖 Chapter I (Sections 1–4)</h3>
+<ul>
+<li>Identity of the Act</li>
+<li>Area of operation</li>
+<li>Repeal of earlier tenancy laws</li>
+<li>Definitions</li>
+</ul>
 
-    <h3 class="section-title">🧾 Section 1 – Short Title & Extent</h3>
-    <ul>
-      <li><b>Name:</b> Chotanagpur Tenancy Act, 1908</li>
-      <li><b>Extent:</b> North Chotanagpur, South Chotanagpur & Palamu divisions</li>
-      <li><b>Includes:</b> Municipal areas, Notified Area Committees & Cantonment areas</li>
-    </ul>
+<h3 class="section-title">🧾 Section 1 – Short Title & Extent</h3>
+<ul>
+<li><b>Name:</b> Chotanagpur Tenancy Act, 1908</li>
+<li><b>Extent:</b> North Chotanagpur, South Chotanagpur & Palamu divisions</li>
+<li><b>Includes:</b> Municipal areas, Notified Area Committees & Cantonment areas</li>
+</ul>
 
-    <h3 class="section-title">🧾 Section 2 – Repeal of Earlier Tenancy Laws</h3>
-    <ul>
-      <li><b>Schedule A:</b> General repeal in Chotanagpur region</li>
-      <li><b>Schedule B:</b> Area-specific repeal (Dhanbad & certain police station areas)</li>
-    </ul>
+<h3 class="section-title">🧾 Section 2 – Repeal of Earlier Tenancy Laws</h3>
+<ul>
+<li><b>Schedule A:</b> General repeal in Chotanagpur region</li>
+<li><b>Schedule B:</b> Area-specific repeal (Dhanbad & certain police station areas)</li>
+</ul>
 
-    <h3 class="section-title">📘 Section 3 – Definitions</h3>
-    <ul>
-      <li><b>Holding:</b> Parcel of land held by a Raiyat forming a separate tenancy</li>
-      <li><b>Korkar:</b> Land artificially levelled for rice cultivation</li>
-      <li><b>Landlord:</b> Person under whom tenant holds land (includes Government)</li>
-      <li><b>Mundari Khunt-Kattidar Tenancy:</b> Interest of a Mundari Khunt-Kattidar</li>
-      <li><b>Permanent Tenure:</b> Heritable tenure not held for a limited time</li>
-      <li><b>Proprietor:</b> Person owning land as estate or part of estate</li>
-      <li><b>Rent:</b> Lawfully payable amount in money or kind (excluding personal service)</li>
-      <li><b>Tenant:</b> Person holding land under another and liable to pay rent</li>
-      <li><b>Tenure:</b> Interest of a tenure-holder (excludes Mundari Khunt-Katti)</li>
-      <li><b>Village Headman:</b> Manki, Manjhi, Pradhan, Tikkadar or Ijardaar</li>
-    </ul>
+<h3 class="section-title">📘 Section 3 – Definitions</h3>
+<ul>
+<li><b>Holding:</b> Parcel of land held by a Raiyat forming a separate tenancy</li>
+<li><b>Korkar:</b> Land artificially levelled for rice cultivation</li>
+<li><b>Landlord:</b> Person under whom tenant holds land (includes Government)</li>
+<li><b>Mundari Khunt-Kattidar Tenancy:</b> Interest of a Mundari Khunt-Kattidar</li>
+<li><b>Permanent Tenure:</b> Heritable tenure not held for a limited time</li>
+<li><b>Proprietor:</b> Person owning land as estate or part of estate</li>
+<li><b>Rent:</b> Lawfully payable amount in money or kind (excluding personal service)</li>
+<li><b>Tenant:</b> Person holding land under another and liable to pay rent</li>
+<li><b>Tenure:</b> Interest of a tenure-holder (excludes Mundari Khunt-Katti)</li>
+<li><b>Village Headman:</b> Manki, Manjhi, Pradhan, Tikkadar or Ijardaar</li>
+</ul>
 
-    <h3 class="section-title">📙 Section 4 – Classes of Tenants</h3>
-    <ul>
-      <li><b>1. Tenure-holders</b> (including under-tenure holders)</li>
-      <li><b>2. Raiyats</b>
-        <ul>
-          <li>Occupancy Raiyats – Right after <b>12 years continuous holding</b></li>
-          <li>Non-Occupancy Raiyats – Temporary tenants</li>
-          <li>Raiyats having Khunt-Katti rights</li>
-        </ul>
-      </li>
-      <li><b>3. Under-Raiyats</b> – Tenants under a Raiyat</li>
-      <li><b>4. Mundari Khunt-Kattidars</b> – Jungle clearers and their male descendants</li>
-    </ul>
+<h3 class="section-title">📙 Section 4 – Classes of Tenants</h3>
+<ul>
+<li><b>1. Tenure-holders</b> (including under-tenure holders)</li>
+<li><b>2. Raiyats</b>
+  <ul>
+    <li>Occupancy Raiyats – Right after <b>12 years continuous holding</b></li>
+    <li>Non-Occupancy Raiyats – Temporary tenants</li>
+    <li>Raiyats having Khunt-Katti rights</li>
+  </ul>
+</li>
+<li><b>3. Under-Raiyats</b> – Tenants under a Raiyat</li>
+<li><b>4. Mundari Khunt-Kattidars</b> – Jungle clearers and their male descendants</li>
+</ul>
 
-    <h3 class="section-title">🎯 JPSC Exam Focus</h3>
-    <ul>
-      <li>Sections 3 & 4 are <b>most important for Prelims</b></li>
-      <li>12-year rule frequently asked</li>
-      <li>Khunt-Katti system important for Mains</li>
-    </ul>
+<h3 class="section-title">🎯 JPSC Exam Focus</h3>
+<ul>
+<li>Sections 3 & 4 are <b>most important for Prelims</b></li>
+<li>12-year rule frequently asked</li>
+<li>Khunt-Katti system important for Mains</li>
+</ul>
 
-  </div>
 </div>
+</div>
+
 <!-- ================= CNT ACT FULL NOTES END ================= -->
-</div>
 
 </div>
-
 </div>
 
 <footer>
-© 2026 Harshit GS Academy • Made for JPSC Aspirants
+© 2026 Harshit GS Academy • CNT Act Notes • All Rights Reserved
 </footer>
 
 <script>
 function toggleCNT(){
   let x=document.getElementById("cnt-notes");
   x.style.display = x.style.display==="block" ? "none" : "block";
-  if(x.style.display==="block") x.scrollIntoView({behavior:"smooth"});
-}
-</script>
-<script>
-function openModule(id) {
-  var modules = document.querySelectorAll('.module');
-  modules.forEach(m => m.style.display = 'none');
-
-  if (id === 'cnt') {
-    openCNT();
-    return;
-  }
-
-  var el = document.getElementById(id);
-  if (el) {
-    el.style.display = 'block';
-    el.scrollIntoView({ behavior: "smooth" });
+  if(x.style.display==="block"){
+    x.scrollIntoView({behavior:"smooth"});
   }
 }
 </script>
+
 </body>
 </html>
