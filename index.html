@@ -1,196 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chotu Babu | JPSC Notes</title>
-    <style>
-        :root {
-            --primary: #00d2ff;
-            --bg: #0f172a;
-            --card-bg: #1e293b;
-            --text: #f8fafc;
-            --accent: #38bdf8;
-        }
+<h2 style="margin-top:0; font-family: Georgia, serif;">
+📘 The Chotanagpur Tenancy Act, 1908 (CNT Act)
+</h2>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
-        }
-
-        /* Logo Styling */
-        .logo {
-            font-size: 2.5rem;
-            font-weight: 800;
-            text-align: center;
-            background: linear-gradient(to right, #00d2ff, #3a7bd5);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 30px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid var(--primary);
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-        }
-
-        /* Coming Soon Badge */
-        .coming-soon {
-            background: #ef4444;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            animation: blink 1.5s infinite;
-        }
-
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-
-        h3 { color: var(--accent); margin-top: 0; }
-
-        /* Table Styling */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-            font-size: 0.95rem;
-        }
-
-        th, td {
-            text-align: left;
-            padding: 12px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        th { color: var(--primary); font-weight: 600; }
-
-        /* List Styling */
-        ul { list-style: none; padding-left: 0; }
-        .list-item {
-            background: rgba(255,255,255,0.03);
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid var(--primary);
-        }
-
-        .sub-points {
-            margin-left: 20px;
-            color: #cbd5e1;
-            font-size: 0.9rem;
-            border-left: 1px dashed #475569;
-            padding-left: 15px;
-            margin-top: 10px;
-        }
-
-        @media (max-width: 600px) {
-            table, thead, tbody, th, td, tr { display: block; }
-            th { display: none; }
-            td { padding: 10px; border: none; }
-            td:before { content: attr(data-label); font-weight: bold; color: var(--primary); display: block; }
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <div class="logo">Chotu Babu</div>
-
-    <div class="section-header">
-        <h2>CNT Act 1908: Chapter 1 & 2</h2>
-        <span class="coming-soon">Active / New</span>
-    </div>
-
-    <div class="card">
-        <h3>Important Definitions</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Term</th>
-                    <th>Legal Meaning</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td data-label="Term"><strong>Mundari Khunt-Kattidari</strong></td>
-                    <td data-label="Meaning">Interest of a Mundari Khunt-Kattidar.</td>
-                </tr>
-                <tr>
-                    <td data-label="Term"><strong>Permanent Tenure</strong></td>
-                    <td data-label="Meaning">Heritable tenure, not held for a limited time.</td>
-                </tr>
-                <tr>
-                    <td data-label="Term"><strong>Proprietor</strong></td>
-                    <td data-label="Meaning">Person owning an estate (in trust or for own benefit).</td>
-                </tr>
-                <tr>
-                    <td data-label="Term"><strong>Rent</strong></td>
-                    <td data-label="Meaning">Lawfully payable in money or kind to a landlord for land use.</td>
-                </tr>
-                <tr>
-                    <td data-label="Term"><strong>Village Headman</strong></td>
-                    <td data-label="Meaning">Known as Manki, Pradhan, Manjhi, Thikadar, or Ijardar.</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div class="card">
-        <h3>Section 4: Classes of Tenants</h3>
-        <div class="list-item">
-            <strong>1. Tenure Holder</strong>
-            <div class="sub-points">Includes under tenure-holders.</div>
-        </div>
-
-        <div class="list-item">
-            <strong>2. Raiyat (Cultivating Tenants)</strong>
-            <div class="sub-points">
-                • <b>Occupancy Raiyats:</b> Rights acquired usually after 12 years.<br>
-                • <b>Non-occupancy:</b> Temporary tenants without rights.<br>
-                • <b>Khunt-Katti Rights:</b> Raiyats with specific ancestral rights.
-            </div>
-        </div>
-
-        <div class="list-item">
-            <strong>3. Under-Raiyat</strong>
-            <div class="sub-points">Holds land under a Raiyat; indirect cultivation.</div>
-        </div>
-
-        <div class="list-item">
-            <strong>4. Mundari Khunt-Kattidar</strong>
-            <div class="sub-points">Mundari who cleared jungle for land; rights pass through the <b>male line</b>.</div>
-        </div>
-    </div>
-
+<div class="section-title">📍 Area of Coverage</div>
+<div style="line-height:30px;">
+The Chotanagpur Tenancy Act, 1908 extends to <span class="highlight">four divisions</span>:
+<br>1️⃣ Palamu  
+<br>2️⃣ Kolhan  
+<br>3️⃣ North Chotanagpur (Hazaribagh)  
+<br>4️⃣ South Chotanagpur (Ranchi)
 </div>
 
-</body>
-</html>
+<div class="section-title">🎯 Objective of the Act</div>
+<div style="line-height:30px;">
+This Act was enacted to <span class="highlight">protect the interests of aboriginals (tribals)</span>
+residing within the Chotanagpur region.
+</div>
+
+<div class="section-title">📚 Structure of the Act</div>
+<div style="line-height:30px;">
+• Total Chapters: <span class="highlight">19</span><br>
+• Total Sections: <span class="highlight">271</span><br>
+• Total Schedules: <span class="highlight">2</span>
+</div>
+
+<div class="section-title">
+<span class="badge">Chapter I</span> Sections 1 to 4
+</div>
+<div style="line-height:30px;">
+• Identity of the Act  
+<br>• Area of operation  
+<br>• Repeal of earlier tenancy laws  
+<br>• Definitions
+</div>
+
+<div class="section-title">
+<span class="badge">Section 1</span> Name & Extent
+</div>
+<div style="line-height:30px;">
+<b>Name:</b> Chotanagpur Tenancy Act, 1908<br>
+<b>Extent:</b> North Chotanagpur, South Chotanagpur & Palamu divisions<br>
+<b>Includes:</b> Municipal areas, Notified Area Committees and Cantonment areas
+</div>
+
+<div class="section-title">
+<span class="badge">Section 2</span> Repeal of Earlier Tenancy Laws
+</div>
+<div style="line-height:30px;">
+• Repeals earlier tenancy laws applicable in Chotanagpur<br>
+• <b>Schedule A:</b> General repeal in Chotanagpur region<br>
+• <b>Schedule B:</b> Area-specific repeal (Dhanbad & certain police station areas)
+</div>
+
+<div class="section-title">
+<span class="badge">Section 3</span> Definitions
+</div>
+<div style="line-height:30px;">
+
+<b>Holding:</b><br>
+A parcel or parcels of land held by a <span class="highlight">raiyat</span> and forming the
+subject of a separate tenancy.<br><br>
+
+<b>Korkar:</b><br>
+Land artificially levelled or embanked primarily for the
+<span class="highlight">cultivation of rice</span>.<br><br>
+
+<b>Landlord:</b><br>
+A person immediately under whom a tenant holds land and
+<span class="highlight">includes the Government</span>.<br><br>
+
+<b>Mundari Khunt-Kattidar Tenancy:</b><br>
+Means the interest of a Mundari Khunt-Kattidar.<br><br>
+
+<b>Permanent Tenure:</b><br>
+A tenure which is <span class="highlight">heritable</span> and
+<span class="highlight">not held for a limited period</span>.<br><br>
+
+<b>Proprietor:</b><br>
+A person owning land, whether in trust or for own benefit,
+as an estate or part of an estate.<br><br>
+
+<b>Rent:</b><br>
+Whatever is lawfully payable in money or kind by a tenant
+to his landlord for use or occupation of land,
+excluding personal service.<br><br>
+
+<b>Tenant:</b><br>
+A person who holds land under another and is or would be
+liable to pay rent for that land.<br><br>
+
+<b>Tenure:</b><br>
+The interest of a tenure-holder and includes an under-tenure,
+but does not include Mundari Khunt-Kattidari tenancy.<br><br>
+
+<b>Village Headman:</b><br>
+Headman of a village or group of villages, known as
+<span class="highlight">Manki, Manjhi, Pradhan</span> or any equivalent
+designation such as <span class="highlight">Tikkadar or Ijardaar</span>.
+</div>
+
+<div class="section-title">
+<span class="badge">Section 4</span> Classes of Tenants
+</div>
+<div style="line-height:30px;">
+
+<b>1️⃣ Tenure-holders:</b><br>
+Includes under-tenure holders.<br><br>
+
+<b>2️⃣ Raiyats (Cultivating Tenants):</b><br>
+
+(a) <b>Occupancy Raiyats:</b><br>
+→ Have right of occupancy<br>
+→ Usually after <span class="highlight">12 years of continuous holding</span><br><br>
+
+(b) <b>Non-Occupancy Raiyats:</b><br>
+→ Do not have occupancy rights<br>
+→ Temporary tenants<br><br>
+
+(c) <b>Raiyats having Khunt-Katti rights</b><br><br>
+
+<b>3️⃣ Under-Raiyats:</b><br>
+Tenants under a raiyat who cultivate land but hold it indirectly.<br><br>
+
+<b>4️⃣ Mundari Khunt-Kattidars:</b><br>
+A Mundari who cleared jungle land, made it fit for cultivation,
+and includes descendants in the male line.
+</div>
+
+<div class="section-title">🎯 JPSC Exam Focus</div>
+<div style="line-height:30px;">
+• Sections <span class="highlight">3 & 4</span> are most important for Prelims<br>
+• <span class="highlight">Occupancy Raiyat (12-year rule)</span> frequently asked<br>
+• Khunt-Katti & Mundari system important for Mains
+</div>
