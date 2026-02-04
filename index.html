@@ -94,6 +94,32 @@ footer{
   padding:30px;
   color:#666;
 }
+  /* Accordion for Syllabus */
+.accordion-btn{
+  background:none;
+  border:none;
+  width:100%;
+  text-align:left;
+  font-size:1.6rem;
+  font-weight:bold;
+  color:var(--blue);
+  cursor:pointer;
+}
+
+.accordion-btn::after{
+  content:" ▶";
+  float:right;
+  transition:transform 0.3s ease;
+}
+
+.accordion-btn.active::after{
+  transform:rotate(90deg);
+}
+
+.accordion-content{
+  display:none;   /* CLOSED BY DEFAULT */
+  margin-top:15px;
+}
 </style>
 </head>
 
@@ -120,9 +146,10 @@ footer{
 
 <!-- JPSC PRELIMINARY SYLLABUS -->
 <div class="card" id="syllabus">
-  <h2 class="section-title">📘 JPSC Preliminary Examination Syllabus</h2>
-
-  <div class="notebook">
+  <button class="accordion-btn">
+  📘 JPSC Preliminary Examination Syllabus
+</button>
+<div class="accordion-content notebook">
 
     <h3>📌 Examination Pattern</h3>
     <ul>
