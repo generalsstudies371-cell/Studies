@@ -3,150 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JPSC Portal | CNT & SPT Notes</title>
+    <title>Chotu Babu | JPSC Notes</title>
     <style>
         :root {
             --primary: #00d2ff;
-            --bg: #0b0f19;
-            --card-bg: rgba(30, 41, 59, 0.7);
+            --bg: #0f172a;
+            --card-bg: #1e293b;
             --text: #f8fafc;
-            --accent-cnt: #ef4444;
-            --accent-spt: #10b981;
+            --accent: #38bdf8;
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background: radial-gradient(circle at top right, #1e293b, #0b0f19);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
             color: var(--text);
             margin: 0;
             padding: 20px;
             line-height: 1.6;
         }
 
-        .container { max-width: 1000px; margin: 0 auto; }
-
-        .hero {
-            text-align: center;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            margin-bottom: 40px;
-        }
-
-        .hero h1 {
+        /* Logo Styling */
+        .logo {
             font-size: 2.5rem;
-            margin: 0;
-            background: linear-gradient(to right, var(--primary), #3a7bd5);
+            font-weight: 800;
+            text-align: center;
+            background: linear-gradient(to right, #00d2ff, #3a7bd5);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+
+        /* Coming Soon Badge */
+        .coming-soon {
+            background: #ef4444;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
         }
 
         .card {
             background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            border-radius: 15px;
-            padding: 25px;
+            border-radius: 12px;
+            padding: 20px;
             margin-bottom: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.05);
         }
 
-        h2 { border-left: 5px solid var(--accent-cnt); padding-left: 15px; color: var(--text); }
-        .spt-title { border-left-color: var(--accent-spt); }
+        h3 { color: var(--accent); margin-top: 0; }
 
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        th { text-align: left; color: var(--primary); padding: 12px; border-bottom: 2px solid rgba(255,255,255,0.1); text-transform: uppercase; font-size: 0.8rem; }
-        td { padding: 15px 12px; border-bottom: 1px solid rgba(255,255,255,0.05); vertical-align: top; }
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
 
-        .note-item {
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th { color: var(--primary); font-weight: 600; }
+
+        /* List Styling */
+        ul { list-style: none; padding-left: 0; }
+        .list-item {
             background: rgba(255,255,255,0.03);
+            margin: 10px 0;
             padding: 15px;
             border-radius: 8px;
-            margin: 10px 0;
-            border-left: 3px solid var(--primary);
+            border-left: 4px solid var(--primary);
         }
 
-        .indent { margin-left: 25px; display: block; color: #cbd5e1; margin-top: 5px; }
-        .male-line { color: #fca5a5; font-weight: bold; text-decoration: underline; }
+        .sub-points {
+            margin-left: 20px;
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            border-left: 1px dashed #475569;
+            padding-left: 15px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            table, thead, tbody, th, td, tr { display: block; }
+            th { display: none; }
+            td { padding: 10px; border: none; }
+            td:before { content: attr(data-label); font-weight: bold; color: var(--primary); display: block; }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header class="hero">
-        <h1>JPSC Study Portal</h1>
-        <p>Complete Notes: CNT Act 1908 & SPT Act 1949</p>
-    </header>
+    <div class="logo">Chotu Babu</div>
 
-    <h2>CNT Act: Chapter 1 & 2</h2>
-    
+    <div class="section-header">
+        <h2>CNT Act 1908: Chapter 1 & 2</h2>
+        <span class="coming-soon">Active / New</span>
+    </div>
+
     <div class="card">
         <h3>Important Definitions</h3>
         <table>
             <thead>
-                <tr><th style="width: 30%;">Term</th><th>Definition from Notes</th></tr>
+                <tr>
+                    <th>Term</th>
+                    <th>Legal Meaning</th>
+                </tr>
             </thead>
             <tbody>
-                <tr><td><strong>Mundari Khunt-Kattidari tenancy</strong></td><td>means the interest of a Mundari Khunt-Kattidar.</td></tr>
-                <tr><td><strong>Permanent tenure</strong></td><td>means a tenure which is heritable and which is not held for a limited time.</td></tr>
-                <tr><td><strong>Proprietor</strong></td><td>means a person owning, whether in trust or for his own benefit, an estate or part of estate.</td></tr>
-                <tr><td><strong>Rent</strong></td><td>means whatever is lawfully payable in money or kind by a tenant to his landlord on account of use or occupation of the land held by the tenant, and includes all dues (other than personal service) which are recoverable under any law for the time being in force as if they were rent.</td></tr>
-                <tr><td><strong>Tenant</strong></td><td>means a person who holds land under another person and is, or but for a special contract would be, liable to pay rent for that land to that person.</td></tr>
-                <tr><td><strong>Tenure</strong></td><td>means the interest of a tenure-holder, and includes an under-tenure but does not include a Mundari Khunt-Kattidari tenancy.</td></tr>
-                <tr><td><strong>Village Headman</strong></td><td>means the headman of a village or of a group of villages, whether known as manki, pradhan, manjhi or otherwise, or by any equivalent designation, such as Thikadar or Ijardar.</td></tr>
+                <tr>
+                    <td data-label="Term"><strong>Mundari Khunt-Kattidari</strong></td>
+                    <td data-label="Meaning">Interest of a Mundari Khunt-Kattidar.</td>
+                </tr>
+                <tr>
+                    <td data-label="Term"><strong>Permanent Tenure</strong></td>
+                    <td data-label="Meaning">Heritable tenure, not held for a limited time.</td>
+                </tr>
+                <tr>
+                    <td data-label="Term"><strong>Proprietor</strong></td>
+                    <td data-label="Meaning">Person owning an estate (in trust or for own benefit).</td>
+                </tr>
+                <tr>
+                    <td data-label="Term"><strong>Rent</strong></td>
+                    <td data-label="Meaning">Lawfully payable in money or kind to a landlord for land use.</td>
+                </tr>
+                <tr>
+                    <td data-label="Term"><strong>Village Headman</strong></td>
+                    <td data-label="Meaning">Known as Manki, Pradhan, Manjhi, Thikadar, or Ijardar.</td>
+                </tr>
             </tbody>
         </table>
     </div>
 
     <div class="card">
-        <h3>Section 4: Class of Tenants</h3>
-        
-        <div class="note-item">
-            <strong>1. Tenure holder including under tenure-holder.</strong>
+        <h3>Section 4: Classes of Tenants</h3>
+        <div class="list-item">
+            <strong>1. Tenure Holder</strong>
+            <div class="sub-points">Includes under tenure-holders.</div>
         </div>
 
-        <div class="note-item">
-            <strong>2. Raiyar (Cultivating tenants)</strong>
-            <span class="indent"><strong>(a) Occupancy Raiyats:</strong></span>
-            <span class="indent" style="margin-left: 45px;">→ Having right of occupancy.</span>
-            <span class="indent" style="margin-left: 45px;">→ usually after 12 years of continuous holding.</span>
-            
-            <span class="indent"><strong>(b) Non-occupancy raiyats:</strong></span>
-            <span class="indent" style="margin-left: 45px;">Do not have occupancy right.</span>
-            <span class="indent" style="margin-left: 45px;">Temporary tenant.</span>
-
-            <span class="indent"><strong>(c) Raiyar having Khunt-kato rights:-</strong></span>
+        <div class="list-item">
+            <strong>2. Raiyat (Cultivating Tenants)</strong>
+            <div class="sub-points">
+                • <b>Occupancy Raiyats:</b> Rights acquired usually after 12 years.<br>
+                • <b>Non-occupancy:</b> Temporary tenants without rights.<br>
+                • <b>Khunt-Katti Rights:</b> Raiyats with specific ancestral rights.
+            </div>
         </div>
 
-        <div class="note-item">
-            <strong>3. Under Raiyats:</strong>
-            <span class="indent">Tenant under a Raiyat, cultivate land but hold it indirectly.</span>
+        <div class="list-item">
+            <strong>3. Under-Raiyat</strong>
+            <div class="sub-points">Holds land under a Raiyat; indirect cultivation.</div>
         </div>
 
-        <div class="note-item">
-            <strong>4. Mundari Khunt Kattidar:-</strong>
-            <span class="indent">A Mundari who cleared the jungle and made the land fit for cultivation and his descendants in the <span class="male-line">male line</span>.</span>
+        <div class="list-item">
+            <strong>4. Mundari Khunt-Kattidar</strong>
+            <div class="sub-points">Mundari who cleared jungle for land; rights pass through the <b>male line</b>.</div>
         </div>
     </div>
 
-    <h2 class="spt-title">SPT Act, 1949</h2>
-    <div class="card">
-        <div class="note-item" style="border-left-color: var(--accent-spt);">
-            <strong>Structure:</strong> The Act is divided into 11 Chapters.
-        </div>
-        <div class="note-item" style="border-left-color: var(--accent-spt);">
-            <strong>Key Restrictions:</strong>
-            <span class="indent">• General prohibition on the transfer of holdings (Chapter V).</span>
-            <span class="indent">• Rent is strictly restricted to <b>cash only</b> (Chapter VII).</span>
-        </div>
-        <div class="note-item" style="border-left-color: var(--accent-spt);">
-            <strong>Legal Power:</strong>
-            <span class="indent">• Jurisdiction of Civil Courts is barred (Chapter IX).</span>
-            <span class="indent">• <b>Deputy Commissioner</b> holds original jurisdiction for ejectment and waste land settlement.</span>
-        </div>
-    </div>
 </div>
 
 </body>
