@@ -19,89 +19,123 @@
 }
 
 body{
-  margin:0;
-  font-family:'Segoe UI',sans-serif;
-  background:var(--light);
-  color:#333;
-}
+  <body>
 
-/* HEADER */
-header{
-  background:linear-gradient(135deg,#1e3c72,#2a5298);
-  color:white;
-  padding:35px 20px;
-  text-align:center;
-}
-header h1{margin:0;font-size:2rem;}
-header p{margin:6px 0;}
-header a{color:#ffeb3b;font-weight:bold;text-decoration:none;}
+<!-- ===== HEADER (ONLY ONE) ===== -->
+<header>
+  <h1>HARSHIT GS ACADEMY</h1>
+  <p>Target 🎯 JPSC & Jharkhand Exams</p>
+  <a href="https://t.me/HarshitGSAcademy" target="_blank">
+    📲 Join Telegram for Free PDFs
+  </a>
+</header>
 
-/* LAYOUT */
-.container{
-  max-width:900px;
-  margin:20px auto;
-  padding:15px;
-}
+<!-- ===== NAVIGATION BAR ===== -->
+<nav>
+  <a href="#syllabus">📘 Syllabus</a>
+  <a href="#history">🏺 History</a>
+  <a href="#polity">⚖️ Polity</a>
+  <a href="#economy">💹 Economy</a>
+  <a href="#geography">🌍 Geography</a>
+  <a href="#science">🔬 Science</a>
+  <a href="#current">📰 CA</a>
+  <a href="#jharkhand">🏞️ Jharkhand</a>
+</nav>
 
-.card{
-  background:white;
-  border-radius:14px;
-  padding:22px;
-  margin-bottom:22px;
-  box-shadow:0 6px 20px rgba(0,0,0,0.06);
-}
+<!-- ===== MAIN CONTENT ===== -->
+<div class="container">
 
-/* BUTTON */
-.btn{
-  display:block;
-  max-width:320px;
-  margin:20px auto;
-  padding:14px;
-  border-radius:12px;
-  font-size:16px;
-  font-weight:bold;
-  border:none;
-  cursor:pointer;
-  background:var(--green);
-  color:white;
-}
+  <!-- SYLLABUS -->
+  <div class="card" id="syllabus">
+    <h2 class="section-main">📘 JPSC PRELIMS SYLLABUS</h2>
+    <p>Two Papers: General Studies & Jharkhand Specific</p>
+  </div>
 
-/* NOTEBOOK STYLE */
-#cnt-notes{display:none;margin-top:20px;}
+  <!-- HISTORY -->
+  <div class="card" id="history">
+    <h2>🏺 General Studies – History</h2>
+    <ul>
+      <li>Ancient India</li>
+      <li>Medieval India</li>
+      <li>Modern India</li>
+      <li>Indian National Movement</li>
+      <li><b>Jharkhand History (Prelims + Mains)</b></li>
+    </ul>
+  </div>
 
-.notebook{
-  background:var(--paper);
-  background-image:linear-gradient(var(--line) 1px,transparent 1px);
-  background-size:100% 32px;
-  padding:30px 22px 22px 40px;
-  border-left:6px solid #ff6f61;
-  border-radius:12px;
-  line-height:32px;
-}
+  <!-- POLITY -->
+  <div class="card" id="polity">
+    <h2>⚖️ General Studies – Polity</h2>
+    <ul>
+      <li>Indian Constitution</li>
+      <li>Fundamental Rights & Duties</li>
+      <li>Union & State Government</li>
+      <li>Local Governance (Panchayat & Municipality)</li>
+    </ul>
+  </div>
 
-.section-title{
-  margin-top:22px;
-  font-weight:bold;
-  color:var(--blue);
-  text-decoration:underline;
-}
+  <!-- ECONOMY -->
+  <div class="card" id="economy">
+    <h2>💹 General Studies – Economy</h2>
+    <ul>
+      <li>Basic Economic Concepts</li>
+      <li>Indian Economy</li>
+      <li>Sustainable Development</li>
+      <li>Jharkhand Economy</li>
+    </ul>
+  </div>
 
-.highlight{
-  background:#fff176;
-  padding:2px 6px;
-  border-radius:4px;
-}
+  <!-- GEOGRAPHY -->
+  <div class="card" id="geography">
+    <h2>🌍 General Studies – Geography</h2>
+    <ul>
+      <li>Physical Geography</li>
+      <li>Indian Geography</li>
+      <li>Economic Geography</li>
+      <li>Jharkhand Geography</li>
+    </ul>
+  </div>
 
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:30px;
-  font-size:0.9rem;
-  color:#666;
-}
-</style>
-</head>
+  <!-- SCIENCE -->
+  <div class="card" id="science">
+    <h2>🔬 General Studies – Science & Tech</h2>
+    <ul>
+      <li>General Science</li>
+      <li>Technology & IT</li>
+      <li>Agriculture</li>
+    </ul>
+  </div>
 
+  <!-- CURRENT AFFAIRS -->
+  <div class="card" id="current">
+    <h2>📰 Current Affairs</h2>
+    <ul>
+      <li>National Events</li>
+      <li>International Events</li>
+      <li>Jharkhand Current Affairs</li>
+    </ul>
+  </div>
+
+  <!-- JHARKHAND GS -->
+  <div class="card" id="jharkhand">
+    <h2>🏞️ Jharkhand General Studies</h2>
+    <ul>
+      <li>History & Culture</li>
+      <li>Tribes & Society</li>
+      <li>Land Laws (CNT / SPT)</li>
+      <li>Industries & Resources</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  © 2026 Harshit GS Academy • Powered by GitHub Pages
+</footer>
+
+</body>
+  
 <body>
 
 <header>
