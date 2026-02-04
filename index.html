@@ -3,310 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JPSC Notes & Syllabus | Harshit GS Academy</title>
-
-    <meta name="author" content="Harshit GS Academy">
-    <meta name="copyright" content="© 2026 Harshit GS Academy">
-
+    <title>JPSC Portal | CNT & SPT Notes</title>
     <style>
         :root {
-            --primary: #1a2a6c;
-            --secondary: #f2994a;
-            --accent: #27ae60;
-            --light: #f8f9fa;
-            --ink: #1a1a1a;
-            --blue-ink: #0047ab;
-            --paper: #fffef0;
-            --margin: #ff7070;
-            --line: #e0eaf5;
-            --telegram: #0088cc;
+            --primary: #00d2ff;
+            --bg: #0b0f19;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text: #f8fafc;
+            --accent-cnt: #ef4444;
+            --accent-spt: #10b981;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: radial-gradient(circle at top right, #1e293b, #0b0f19);
+            color: var(--text);
             margin: 0;
-            background: var(--light);
-            color: #333;
-            scroll-behavior: smooth;
+            padding: 20px;
+            line-height: 1.6;
         }
 
-        header.main-header {
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-            color: white;
-            padding: 40px 20px;
+        .container { max-width: 1000px; margin: 0 auto; }
+
+        .hero {
             text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 40px;
         }
 
-        nav {
-            background: #333;
-            padding: 10px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav a {
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 15px;
+        .hero h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            background: linear-gradient(to right, var(--primary), #3a7bd5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .card {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 5px solid var(--primary);
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
         }
 
-        /* Syllabus Heading & Blocks */
-        .paper-heading {
-            background: var(--primary);
-            color: white;
-            padding: 12px;
-            border-radius: 8px;
-            margin: 20px 0 15px 0;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-align: center;
-        }
+        h2 { border-left: 5px solid var(--accent-cnt); padding-left: 15px; color: var(--text); }
+        .spt-title { border-left-color: var(--accent-spt); }
 
-        .sub-block {
-            border-left: 4px solid var(--secondary);
-            background: #fffdfa;
-            padding: 10px 15px;
-            margin-bottom: 15px;
-            border-radius: 0 8px 8px 0;
-        }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th { text-align: left; color: var(--primary); padding: 12px; border-bottom: 2px solid rgba(255,255,255,0.1); text-transform: uppercase; font-size: 0.8rem; }
+        td { padding: 15px 12px; border-bottom: 1px solid rgba(255,255,255,0.05); vertical-align: top; }
 
-        .sub-block h3 { margin: 0 0 8px 0; color: var(--primary); font-size: 1.1rem; }
-
-        .cta-btn {
-            display: block;
-            margin: 20px auto;
-            padding: 14px 22px;
-            background: var(--accent);
-            color: white;
-            border-radius: 10px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            width: 100%;
-            max-width: 300px;
-        }
-
-        .telegram-btn {
-            display: block;
-            margin: 10px auto 25px;
-            padding: 12px 20px;
-            background: var(--telegram);
-            color: white;
-            border-radius: 8px;
-            font-weight: bold;
-            text-align: center;
-            width: fit-content;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
-        }
-
-        .grid-menu {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .grid-item {
-            background: #eef2f7;
+        .note-item {
+            background: rgba(255,255,255,0.03);
             padding: 15px;
             border-radius: 8px;
-            font-weight: bold;
-            color: var(--primary);
-            text-align: center;
-            cursor: pointer;
-            transition: 0.3s;
+            margin: 10px 0;
+            border-left: 3px solid var(--primary);
         }
 
-        .grid-item:hover { background: var(--secondary); color: white; }
-
-        /* Handwritten Notebook Logic */
-        #cnt-notes { display: none; margin-top: 20px; animation: fadeIn 0.5s; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .notebook {
-            background-color: var(--paper);
-            background-image: linear-gradient(var(--line) 1px, transparent 1px);
-            background-size: 100% 30px;
-            padding: 30px 20px 20px 40px;
-            border-left: 5px solid var(--margin);
-            border-radius: 8px;
-            line-height: 30px;
-        }
-
-        .section-title { color: var(--blue-ink); font-weight: bold; margin-top: 20px; text-decoration: underline; }
-        .highlight { background: rgba(255, 235, 59, 0.5); padding: 2px 5px; border-radius: 3px; }
-        .badge { display: inline-block; background: var(--ink); color: white; padding: 0 8px; border-radius: 10px; font-size: 0.8rem; }
-
-        .footer { text-align: center; padding: 30px; color: #777; font-size: 0.9rem; }
+        .indent { margin-left: 25px; display: block; color: #cbd5e1; margin-top: 5px; }
+        .male-line { color: #fca5a5; font-weight: bold; text-decoration: underline; }
     </style>
 </head>
-
 <body>
 
-<header class="main-header">
-    <h1>HARSHIT GS ACADEMY</h1>
-    <p>Target JPSC & Competitive Exams</p>
-    <a href="https://t.me/HarshitGSAcademy" target="_blank" style="color:white; text-decoration:underline;">Join our Telegram Channel</a>
-</header>
-
 <div class="container">
+    <header class="hero">
+        <h1>JPSC Study Portal</h1>
+        <p>Complete Notes: CNT Act 1908 & SPT Act 1949</p>
+    </header>
+
+    <h2>CNT Act: Chapter 1 & 2</h2>
     
-    <button class="cta-btn" onclick="openCNT()">📘 Read Free CNT Act Notes</button>
+    <div class="card">
+        <h3>Important Definitions</h3>
+        <table>
+            <thead>
+                <tr><th style="width: 30%;">Term</th><th>Definition from Notes</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Mundari Khunt-Kattidari tenancy</strong></td><td>means the interest of a Mundari Khunt-Kattidar.</td></tr>
+                <tr><td><strong>Permanent tenure</strong></td><td>means a tenure which is heritable and which is not held for a limited time.</td></tr>
+                <tr><td><strong>Proprietor</strong></td><td>means a person owning, whether in trust or for his own benefit, an estate or part of estate.</td></tr>
+                <tr><td><strong>Rent</strong></td><td>means whatever is lawfully payable in money or kind by a tenant to his landlord on account of use or occupation of the land held by the tenant, and includes all dues (other than personal service) which are recoverable under any law for the time being in force as if they were rent.</td></tr>
+                <tr><td><strong>Tenant</strong></td><td>means a person who holds land under another person and is, or but for a special contract would be, liable to pay rent for that land to that person.</td></tr>
+                <tr><td><strong>Tenure</strong></td><td>means the interest of a tenure-holder, and includes an under-tenure but does not include a Mundari Khunt-Kattidari tenancy.</td></tr>
+                <tr><td><strong>Village Headman</strong></td><td>means the headman of a village or of a group of villages, whether known as manki, pradhan, manjhi or otherwise, or by any equivalent designation, such as Thikadar or Ijardar.</td></tr>
+            </tbody>
+        </table>
+    </div>
 
-    <a href="https://t.me/HarshitGSAcademy" target="_blank" class="telegram-btn">
-        📲 Click to Join Telegram (Free PDFs)
-    </a>
-
-    <nav>
-        <a href="#">🏠 Home</a>
-        <a href="#syllabus">📘 Syllabus</a>
-        <a href="#notes">📚 Notes</a>
-    </nav>
-
-    <div class="card" id="syllabus">
-        <h2 style="text-align: center;">✅ JPSC PRELIMINARY EXAMINATION SYLLABUS</h2>
-
-        <div class="paper-heading">🟦 PAPER I – GENERAL STUDIES</div>
-        <div class="sub-block">
-            <h3>🏺 History of India</h3>
-            <ul><li>Ancient, Medieval, and Modern India</li></ul>
-        </div>
-        <div class="sub-block">
-            <h3>🌍 Geography of India</h3>
-            <ul><li>General, Physical, Economic, and Social & Demographic Geography</li></ul>
-        </div>
-        <div class="sub-block">
-            <h3>💹 Economic & Sustainable Development</h3>
-            <ul><li>Basic features of Indian Economy, Sustainable Development, and Economic issues</li></ul>
-        </div>
-        <div class="sub-block">
-            <h3>⚖️ Indian Polity & Governance</h3>
-            <ul><li>Constitution of India, Public Administration, Good Governance, and Decentralization (Panchayats & Municipalities)</li></ul>
-        </div>
-        <div class="sub-block">
-            <h3>🔬 General Science, Technology & Agriculture</h3>
-            <ul><li>General Science, IT, and Agriculture</li></ul>
-        </div>
-        <div class="sub-block">
-            <h3>📰 Current Affairs & Miscellaneous</h3>
-            <ul><li>National & International Events, Jharkhand History/Society, and General Miscellaneous questions</li></ul>
+    <div class="card">
+        <h3>Section 4: Class of Tenants</h3>
+        
+        <div class="note-item">
+            <strong>1. Tenure holder including under tenure-holder.</strong>
         </div>
 
-        <div class="paper-heading" style="background: var(--accent);">🟦 PAPER II – JHARKHAND SPECIFIC</div>
-        <div class="sub-block" style="border-left-color: var(--accent);">
-            <h3>🏞️ History & Identity</h3>
-            <ul><li>History of Jharkhand, Movement, and Specific identity</li></ul>
+        <div class="note-item">
+            <strong>2. Raiyar (Cultivating tenants)</strong>
+            <span class="indent"><strong>(a) Occupancy Raiyats:</strong></span>
+            <span class="indent" style="margin-left: 45px;">→ Having right of occupancy.</span>
+            <span class="indent" style="margin-left: 45px;">→ usually after 12 years of continuous holding.</span>
+            
+            <span class="indent"><strong>(b) Non-occupancy raiyats:</strong></span>
+            <span class="indent" style="margin-left: 45px;">Do not have occupancy right.</span>
+            <span class="indent" style="margin-left: 45px;">Temporary tenant.</span>
+
+            <span class="indent"><strong>(c) Raiyar having Khunt-kato rights:-</strong></span>
         </div>
-        <div class="sub-block" style="border-left-color: var(--accent);">
-            <h3>📚 Culture, Society & Literature</h3>
-            <ul><li>Literature, Tribal Culture, Folk dance, Music, and People & Society</li></ul>
+
+        <div class="note-item">
+            <strong>3. Under Raiyats:</strong>
+            <span class="indent">Tenant under a Raiyat, cultivate land but hold it indirectly.</span>
         </div>
-        <div class="sub-block" style="border-left-color: var(--accent);">
-            <h3>🗺️ Tourism & Heritage</h3>
-            <ul><li>Tourist places & Heritage of Jharkhand</li></ul>
-        </div>
-        <div class="sub-block" style="border-left-color: var(--accent);">
-            <h3>🎓 Education & Sports</h3>
-            <ul><li>Educational institutions and Sports in Jharkhand</li></ul>
-        </div>
-        <div class="sub-block" style="border-left-color: var(--accent);">
-            <h3>⚖️ Laws, Economy & Environment</h3>
-            <ul><li><b>Land Related Laws (CNT, SPT, etc.)</b>, Industries, Natural resources, and Disaster Management</li></ul>
-        </div>
-        <div class="sub-block" style="border-left-color: var(--accent);">
-            <h3>🧩 Jharkhand Miscellaneous</h3>
-            <ul><li>Jharkhand-related miscellaneous topics</li></ul>
+
+        <div class="note-item">
+            <strong>4. Mundari Khunt Kattidar:-</strong>
+            <span class="indent">A Mundari who cleared the jungle and made the land fit for cultivation and his descendants in the <span class="male-line">male line</span>.</span>
         </div>
     </div>
 
-    <div class="card" id="notes">
-        <h2>📚 General Studies Modules</h2>
-        <div class="grid-menu">
-            <div class="grid-item">📍 Jharkhand Map</div>
-            <div class="grid-item">🌳 State Wildlife</div>
-            <div class="grid-item">🏛️ Admin Setup</div>
-            <div class="grid-item" onclick="openCNT()">📜 SPT / CNT Act</div>
+    <h2 class="spt-title">SPT Act, 1949</h2>
+    <div class="card">
+        <div class="note-item" style="border-left-color: var(--accent-spt);">
+            <strong>Structure:</strong> The Act is divided into 11 Chapters.
         </div>
-
-        <div id="cnt-notes">
-            <div class="notebook">
-                <h2 style="margin-top:0; font-family: Georgia, serif;">📘 The Chotanagpur Tenancy Act, 1908</h2>
-                
-                <div style="margin-bottom:15px;">
-                    <b>Covers Four Divisions:</b><br>
-                    1. <span class="highlight">Palamu (Medininagar)</span> | 2. <span class="highlight">Kolhan (Chaibasa)</span><br>
-                    3. <span class="highlight">North Chotanagpur (Hazaribagh)</span> | 4. <span class="highlight">South Chotanagpur (Ranchi)</span>
-                </div>
-
-                <div style="margin-bottom:15px;">
-                    <b>Objective:</b> Passed to protect the interests of aboriginals residing within the above regions.<br>
-                    <b>Structure:</b> Contains 19 Chapters, 271 Sections, and two Schedules.
-                </div>
-
-                <div class="section-title"><span class="badge">Chapter 1</span> Sections 1 to 4</div>
-                <i>Identity, Area of Operation, Repeal of earlier laws & definitions.</i>
-
-                <div class="section-title"><span class="badge">Section 1</span> Name & Extent</div>
-                <b>Name:</b> Chotanagpur Tenancy Act, 1908.<br>
-                <b>Extent:</b> North Chotanagpur, South Chotanagpur & Palamu divisions.<br>
-                <b>Includes:</b> Municipal areas, Notified area Committees, and Cantonment areas.
-
-                <div class="section-title"><span class="badge">Section 2</span> Repeal</div>
-                <b>Repeal:</b> Repeal earlier tenancy law.<br>
-                • <b>Schedule A:</b> General repeal in Chotanagpur.<br>
-                • <b>Schedule B:</b> Area-Specific repeal (Dhanbad and certain police stations).
-
-                <div class="section-title"><span class="badge">Section 3</span> Definitions</div>
-                • <b>Holding:</b> A parcel or parcels of land held by a raiyat and forming the subject of a separate tenancy.<br>
-                • <b>Korkar:</b> Land artificially leveled or embanked primarily for the cultivation of rice.<br>
-                • <b>Landlord:</b> Person immediately under whom a tenant holds, and includes the Govt.
-            </div>
+        <div class="note-item" style="border-left-color: var(--accent-spt);">
+            <strong>Key Restrictions:</strong>
+            <span class="indent">• General prohibition on the transfer of holdings (Chapter V).</span>
+            <span class="indent">• Rent is strictly restricted to <b>cash only</b> (Chapter VII).</span>
+        </div>
+        <div class="note-item" style="border-left-color: var(--accent-spt);">
+            <strong>Legal Power:</strong>
+            <span class="indent">• Jurisdiction of Civil Courts is barred (Chapter IX).</span>
+            <span class="indent">• <b>Deputy Commissioner</b> holds original jurisdiction for ejectment and waste land settlement.</span>
         </div>
     </div>
-
 </div>
-
-<div class="footer">
-    © 2026 Harshit GS Academy. All Rights Reserved.<br>
-    Designed by Harshit (Chotu Babu)
-</div>
-
-<script>
-function openCNT() {
-    var x = document.getElementById("cnt-notes");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-        x.scrollIntoView({ behavior: "smooth" });
-    }
-}
-</script>
 
 </body>
 </html>
