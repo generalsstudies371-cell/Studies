@@ -36,6 +36,7 @@ nav{
   position:sticky;
   top:0;
   text-align:center;
+  z-index:1000;
 }
 nav a{
   color:white;
@@ -78,23 +79,15 @@ nav a{
   line-height:32px;
 }
 
-/* PYQ section styling */
-.pyq-year{
-  margin-top:10px;
-  padding-left:15px;
-}
-
+/* PYQ */
+.pyq-year{margin-top:10px;padding-left:15px;}
 .pyq-year a{
   display:block;
   padding:6px 0;
   color:#1e293b;
   text-decoration:none;
 }
-
-.pyq-year a:hover{
-  color:#2563eb;
-  font-weight:bold;
-}
+.pyq-year a:hover{color:#2563eb;font-weight:bold;}
 
 footer{
   text-align:center;
@@ -114,13 +107,48 @@ footer{
 </header>
 
 <nav>
+  <a href="#syllabus">📘 Syllabus</a>
+  <a href="#history">🏺 History</a>
+  <a href="#polity">⚖️ Polity</a>
+  <a href="#economy">💹 Economy</a>
+  <a href="#geography">🌍 Geography</a>
   <a href="#pyq">📑 PYQ</a>
   <a href="#cnt">📜 CNT Act</a>
 </nav>
 
 <div class="container">
 
-<!-- ================= PYQ SECTION ================= -->
+<!-- SYLLABUS -->
+<div class="card" id="syllabus">
+  <h2 class="section-title">📘 JPSC Syllabus</h2>
+  <p>Complete General Studies syllabus for JPSC Preliminary & Mains.</p>
+</div>
+
+<!-- HISTORY -->
+<div class="card" id="history">
+  <h2 class="section-title">🏺 History</h2>
+  <p>Ancient, Medieval, Modern & Jharkhand History notes.</p>
+</div>
+
+<!-- POLITY -->
+<div class="card" id="polity">
+  <h2 class="section-title">⚖️ Polity</h2>
+  <p>Indian Constitution, Governance, Panchayati Raj & PYQs.</p>
+</div>
+
+<!-- ECONOMY -->
+<div class="card" id="economy">
+  <h2 class="section-title">💹 Economy</h2>
+  <p>Indian Economy, Jharkhand Economy & current issues.</p>
+</div>
+
+<!-- GEOGRAPHY -->
+<div class="card" id="geography">
+  <h2 class="section-title">🌍 Geography</h2>
+  <p>Physical, Indian & Jharkhand Geography with maps.</p>
+</div>
+
+<!-- PYQ -->
 <div class="exam-box" id="pyq">
   <h2 class="section-title">📑 Previous Year Questions – JPSC</h2>
 
@@ -141,7 +169,7 @@ footer{
   </div>
 </div>
 
-<!-- ================= CNT FULL NOTES ================= -->
+<!-- CNT ACT FULL CONTENT -->
 <div class="card" id="cnt">
   <h2 class="section-title">📜 Chotanagpur Tenancy Act, 1908 (CNT Act)</h2>
 
@@ -212,7 +240,7 @@ footer{
           <li>Raiyats having Khunt-Katti rights</li>
         </ul>
       </li>
-      <li><b>3. Under-Raiyats</b> – Tenants under a raiyat, cultivate indirectly</li>
+      <li><b>3. Under-Raiyats</b> – Tenants under a raiyat</li>
       <li><b>4. Mundari Khunt-Kattidars</b> – Mundari who cleared jungle land and their male descendants</li>
     </ul>
 
