@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JPSC Notes | Harshit GS Academy</title>
-
+    <title>JPSC Syllabus & Notes | Harshit GS Academy</title>
     <style>
         :root {
             --primary: #1a2a6c;
@@ -16,6 +15,7 @@
             --paper: #fffef0;
             --margin: #ff7070;
             --line: #e0eaf5;
+            --jpsc-blue: #2980b9;
         }
 
         body {
@@ -23,19 +23,21 @@
             margin: 0;
             background: var(--light);
             color: #333;
+            scroll-behavior: smooth;
         }
 
-        /* Full Header with Gradient */
+        /* Gradient Header */
         header.main-header {
             background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
             color: white;
-            padding: 40px 20px;
+            padding: 45px 20px;
             text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         nav {
             background: #333;
-            padding: 10px;
+            padding: 12px;
             text-align: center;
             position: sticky;
             top: 0;
@@ -59,13 +61,35 @@
         .card {
             background: white;
             padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-top: 5px solid var(--primary);
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-top: 6px solid var(--primary);
         }
 
-        /* Subject Dashboard Grid */
+        /* Syllabus Styling */
+        .paper-title {
+            background: var(--jpsc-blue);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .subject-subgroup {
+            border-left: 3px solid var(--secondary);
+            margin: 15px 0;
+            padding-left: 15px;
+        }
+
+        .subject-subgroup h4 {
+            margin: 0 0 5px 0;
+            color: var(--primary);
+        }
+
+        /* Dashboard Grid */
         .subject-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -78,23 +102,18 @@
             border-radius: 15px;
             text-align: center;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: 0.3s;
             border: 2px solid transparent;
         }
 
-        .subject-card:hover { transform: translateY(-5px); }
+        .subject-card:hover { transform: translateY(-5px); box-shadow: 0 6px 15px rgba(0,0,0,0.1); }
 
-        /* Module Colors */
         .jharkhand { background: #e8f5e9; color: #2e7d32; border-color: #c8e6c9; }
         .history { background: #fff3e0; color: #ef6c00; border-color: #ffe0b2; }
         .polity { background: #e3f2fd; color: #1565c0; border-color: #bbdefb; }
         .economy { background: #f3e5f5; color: #7b1fa2; border-color: #e1bee7; }
 
-        .subject-icon { font-size: 1.8rem; margin-bottom: 8px; }
-        .subject-name { font-weight: bold; }
-        .status { font-size: 0.7rem; opacity: 0.7; text-transform: uppercase; margin-top: 5px; }
-
-        /* Handwritten Notebook Style */
+        /* Notebook Style */
         #cnt-notes {
             display: none;
             margin-top: 25px;
@@ -110,114 +129,145 @@
             background-color: var(--paper);
             background-image: linear-gradient(var(--line) 1px, transparent 1px);
             background-size: 100% 30px;
-            padding: 30px 20px 20px 45px;
+            padding: 40px 20px 20px 45px;
             border-left: 5px solid var(--margin);
             border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
         }
 
         .section-title { color: var(--blue-ink); font-weight: bold; margin-top: 20px; text-decoration: underline; }
         .highlight { background: rgba(255, 235, 59, 0.4); padding: 2px 4px; }
         .badge { background: var(--ink); color: white; padding: 0 8px; border-radius: 10px; font-size: 0.8rem; }
 
-        .footer { text-align: center; padding: 40px; color: #777; font-size: 0.9rem; }
-
-        .telegram-link {
-            display: inline-block;
-            background: #0088cc;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 20px 0;
-        }
+        .footer { text-align: center; padding: 40px; color: #777; font-size: 0.9rem; border-top: 1px solid #ddd; }
     </style>
 </head>
 <body>
 
 <header class="main-header">
     <h1>HARSHIT GS ACADEMY</h1>
-    <p>Target JPSC: Simplified Handwritten Notes</p>
-    <a href="https://t.me/HarshitGSAcademy" class="telegram-link">📲 Join Telegram for PDFs</a>
+    <p>Target JPSC: Detailed Syllabus & Handwritten Notes</p>
 </header>
 
 <nav>
     <a href="#">🏠 Home</a>
     <a href="#syllabus">📋 Syllabus</a>
     <a href="#notes">📚 Notes</a>
-    <a href="#">📈 News</a>
 </nav>
 
 <div class="container">
 
     <div class="card" id="syllabus">
-        <h2>📘 JPSC Paper-II (Jharkhand Specific)</h2>
-        <p>Paper-II consists of 100 questions. <b>Land Related Laws (CNT/SPT)</b> carry 12 questions (24 Marks).</p>
+        <h2 style="text-align: center; color: var(--primary);">✅ JPSC PRELIMINARY SYLLABUS</h2>
+        <p style="text-align: center;">Updated for 2026 Competitive Exams</p>
+
+        <div class="paper-title">📘 PAPER I – GENERAL STUDIES</div>
+        
+        <div class="subject-subgroup">
+            <h4>🏺 History of India</h4>
+            <small>Ancient, Medieval, and Modern India</small>
+        </div>
+
+        <div class="subject-subgroup">
+            <h4>🌍 Geography of India</h4>
+            <small>General, Physical, Economic, and Social/Demographic Geography</small>
+        </div>
+
+        <div class="subject-subgroup">
+            <h4>⚖️ Indian Polity & Governance</h4>
+            <small>Constitution, Public Admin, Good Governance, Panchayats/Municipalities</small>
+        </div>
+
+        <div class="subject-subgroup">
+            <h4>💹 Economic & Sustainable Development</h4>
+            <small>Basic Features, Sustainable Development, Economic Issues</small>
+        </div>
+
+        <div class="subject-subgroup">
+            <h4>🔬 Science & Tech</h4>
+            <small>General Science, Agriculture, IT</small>
+        </div>
+
+        <div class="paper-title" style="background: var(--accent);">🟦 PAPER II – JHARKHAND SPECIFIC</div>
+
+        <div class="subject-subgroup">
+            <h4>🏞️ History & Identity</h4>
+            <small>History of Jharkhand, Movement, Specific Identity</small>
+        </div>
+
+        <div class="subject-subgroup">
+            <h4>📚 Culture & Literature</h4>
+            <small>Tribal Culture, Folk Dance/Music, Literary Personalities</small>
+        </div>
+
+        <div class="subject-subgroup">
+            <h4>⚖️ Laws & Economy</h4>
+            <small>CNT/SPT Acts, Industries, Natural Resources, Disaster Management</small>
+        </div>
+
+        <div class="subject-subgroup">
+            <h4>🎓 Education & Sports</h4>
+            <small>Major Institutions, Sports Personnel of Jharkhand</small>
+        </div>
     </div>
 
     <div class="card" id="notes">
-        <h2>📚 Subject Dashboard</h2>
-        <p>Tap on a module to expand the notes.</p>
+        <h2 style="color: var(--primary);">📚 Subject Notes Dashboard</h2>
+        <p>Tap "Jharkhand GK" to view the <b>CNT Act 1908</b> notes.</p>
 
         <div class="subject-grid">
             <div class="subject-card jharkhand" onclick="toggleCNT()">
-                <div class="subject-icon">🏹</div>
-                <div class="subject-name">Jharkhand GK</div>
-                <div class="status">CNT Act Active ●</div>
+                <div style="font-size: 1.8rem;">🏹</div>
+                <div style="font-weight: bold;">Jharkhand GK</div>
+                <div style="font-size: 0.7rem; opacity: 0.8;">CNT Act Active ●</div>
             </div>
             <div class="subject-card history">
-                <div class="subject-icon">📜</div>
-                <div class="subject-name">History</div>
-                <div class="status">Coming Soon</div>
+                <div style="font-size: 1.8rem;">📜</div>
+                <div style="font-weight: bold;">History</div>
+                <div style="font-size: 0.7rem; opacity: 0.8;">Coming Soon</div>
             </div>
             <div class="subject-card polity">
-                <div class="subject-icon">⚖️</div>
-                <div class="subject-name">Polity</div>
-                <div class="status">Coming Soon</div>
+                <div style="font-size: 1.8rem;">⚖️</div>
+                <div style="font-weight: bold;">Polity</div>
+                <div style="font-size: 0.7rem; opacity: 0.8;">Coming Soon</div>
             </div>
             <div class="subject-card economy">
-                <div class="subject-icon">📈</div>
-                <div class="subject-name">Economy</div>
-                <div class="status">Coming Soon</div>
+                <div style="font-size: 1.8rem;">📈</div>
+                <div style="font-weight: bold;">Economy</div>
+                <div style="font-size: 0.7rem; opacity: 0.8;">Coming Soon</div>
             </div>
         </div>
 
         <div id="cnt-notes">
             <div class="notebook">
-                <h2 style="font-family: Georgia, serif; color: var(--ink);">📖 CNT Act, 1908 Notes</h2>
+                <h3 style="margin-top:0; color: var(--ink);">📖 CNT Act, 1908: Chapter 1</h3>
                 
-                <div class="section-title">📍 Coverage Area</div>
+                <div class="section-title"><span class="badge">Sec 1</span> Short Title & Extent</div>
                 <div style="line-height:30px;">
-                    Applied to <span class="highlight">4 Divisions</span>: Palamu, Kolhan, North Chotanagpur, & South Chotanagpur.
+                    Applies to: <span class="highlight">Palamu, Kolhan, North Chotanagpur, South Chotanagpur</span>. 
+                    Does not include Municipal areas.
                 </div>
 
-                <div class="section-title"><span class="badge">Section 3</span> Key Definitions</div>
+                <div class="section-title"><span class="badge">Sec 3</span> Important Definitions</div>
                 <div style="line-height:30px;">
-                    • <b>Korkar:</b> Land leveled for <span class="highlight">rice cultivation</span>.<br>
-                    • <b>Agriculture Year:</b> Starts on <span class="highlight">1st Baisakh</span>.<br>
-                    • <b>Bhuinhari:</b> Ancestral land of village founders.
+                    • <b>Korkar:</b> Land cleared from jungle for rice.<br>
+                    • <b>Agriculture Year:</b> Starts 1st Baisakh.<br>
+                    • <b>Bhuinhari:</b> Original tribal land ownership.
                 </div>
 
-                <div class="section-title"><span class="badge">Section 4</span> Classes of Tenants</div>
+                <div class="section-title"><span class="badge">Sec 4</span> 4 Classes of Tenants</div>
                 <div style="line-height:30px;">
-                    1. <b>Tenure-holders</b> (Collectors)<br>
-                    2. <b>Raiyats</b> (Occupancy, Non-Occupancy, Khunt-katti rights)<br>
-                    3. <b>Under-raiyats</b> (Sub-tenants)<br>
-                    4. <b>Mundari Khunt-Kattidars</b>
-                </div>
-
-                <div class="section-title">🎯 Exam Focus Point</div>
-                <div style="line-height:30px;">
-                    Remember: The occupancy right for a Raiyat is usually established after <span class="highlight">12 years</span> of continuous land holding.
+                    1. Tenure-holders | 2. Raiyats | 3. Under-raiyats | 4. Mundari Khunt-Kattidars
                 </div>
             </div>
         </div>
     </div>
+
 </div>
 
 <div class="footer">
-    © 2026 Harshit GS Academy | Created for JPSC Aspirants
+    © 2026 Harshit GS Academy | Dedicated to JPSC Aspirants<br>
+    Designed for Mobile View
 </div>
 
 <script>
@@ -225,7 +275,7 @@
         var x = document.getElementById("cnt-notes");
         if (x.style.display === "none" || x.style.display === "") {
             x.style.display = "block";
-            x.scrollIntoView({ behavior: 'smooth' });
+            window.scrollTo({ top: x.offsetTop - 100, behavior: 'smooth' });
         } else {
             x.style.display = "none";
         }
