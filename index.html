@@ -69,7 +69,7 @@
             border-top: 5px solid var(--primary);
         }
 
-        /* Syllabus Sectioning */
+        /* Syllabus Heading & Blocks */
         .paper-heading {
             background: var(--primary);
             color: white;
@@ -91,7 +91,6 @@
 
         .sub-block h3 { margin: 0 0 8px 0; color: var(--primary); font-size: 1.1rem; }
 
-        /* Buttons */
         .cta-btn {
             display: block;
             margin: 20px auto;
@@ -121,7 +120,6 @@
             box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
         }
 
-        /* Grid Menu */
         .grid-menu {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -142,7 +140,7 @@
 
         .grid-item:hover { background: var(--secondary); color: white; }
 
-        /* Handwritten Notebook */
+        /* Handwritten Notebook Logic */
         #cnt-notes { display: none; margin-top: 20px; animation: fadeIn 0.5s; }
 
         @keyframes fadeIn {
@@ -157,6 +155,7 @@
             padding: 30px 20px 20px 40px;
             border-left: 5px solid var(--margin);
             border-radius: 8px;
+            line-height: 30px;
         }
 
         .section-title { color: var(--blue-ink); font-weight: bold; margin-top: 20px; text-decoration: underline; }
@@ -172,7 +171,7 @@
 <header class="main-header">
     <h1>HARSHIT GS ACADEMY</h1>
     <p>Target JPSC & Competitive Exams</p>
-    <a href="https://t.me/HarshitGSAcademy" target="_blank" style="color:white; text-decoration:underline;">Join us on Telegram</a>
+    <a href="https://t.me/HarshitGSAcademy" target="_blank" style="color:white; text-decoration:underline;">Join our Telegram Channel</a>
 </header>
 
 <div class="container">
@@ -190,54 +189,54 @@
     </nav>
 
     <div class="card" id="syllabus">
-        <h2 style="text-align: center;">✅ JPSC PRELIMINARY SYLLABUS</h2>
-        
+        <h2 style="text-align: center;">✅ JPSC PRELIMINARY EXAMINATION SYLLABUS</h2>
+
         <div class="paper-heading">🟦 PAPER I – GENERAL STUDIES</div>
         <div class="sub-block">
             <h3>🏺 History of India</h3>
-            <ul><li>Ancient, Medieval, Modern India</li></ul>
+            <ul><li>Ancient, Medieval, and Modern India</li></ul>
         </div>
         <div class="sub-block">
             <h3>🌍 Geography of India</h3>
-            <ul><li>General, Physical, Economic, Social & Demographic Geography</li></ul>
+            <ul><li>General, Physical, Economic, and Social & Demographic Geography</li></ul>
         </div>
         <div class="sub-block">
             <h3>💹 Economic & Sustainable Development</h3>
-            <ul><li>Economy Basics, Sustainable Development, Economic issues</li></ul>
+            <ul><li>Basic features of Indian Economy, Sustainable Development, and Economic issues</li></ul>
         </div>
         <div class="sub-block">
             <h3>⚖️ Indian Polity & Governance</h3>
-            <ul><li>Constitution, Public Admin, Good Governance, Panchayats/Municipalities</li></ul>
+            <ul><li>Constitution of India, Public Administration, Good Governance, and Decentralization (Panchayats & Municipalities)</li></ul>
         </div>
         <div class="sub-block">
-            <h3>🔬 General Science, Tech & Agriculture</h3>
-            <ul><li>Science, IT, Agriculture</li></ul>
+            <h3>🔬 General Science, Technology & Agriculture</h3>
+            <ul><li>General Science, IT, and Agriculture</li></ul>
         </div>
         <div class="sub-block">
-            <h3>📰 Current Affairs & Misc.</h3>
-            <ul><li>National/International Events, Jharkhand History/Society, Misc.</li></ul>
+            <h3>📰 Current Affairs & Miscellaneous</h3>
+            <ul><li>National & International Events, Jharkhand History/Society, and General Miscellaneous questions</li></ul>
         </div>
 
         <div class="paper-heading" style="background: var(--accent);">🟦 PAPER II – JHARKHAND SPECIFIC</div>
         <div class="sub-block" style="border-left-color: var(--accent);">
             <h3>🏞️ History & Identity</h3>
-            <ul><li>History of Jharkhand, Movement, Specific identity</li></ul>
+            <ul><li>History of Jharkhand, Movement, and Specific identity</li></ul>
         </div>
         <div class="sub-block" style="border-left-color: var(--accent);">
             <h3>📚 Culture, Society & Literature</h3>
-            <ul><li>Literature, Tribal Culture, Folk dance, Music, People & Society</li></ul>
+            <ul><li>Literature, Tribal Culture, Folk dance, Music, and People & Society</li></ul>
         </div>
         <div class="sub-block" style="border-left-color: var(--accent);">
             <h3>🗺️ Tourism & Heritage</h3>
-            <ul><li>Tourist places & Heritage</li></ul>
+            <ul><li>Tourist places & Heritage of Jharkhand</li></ul>
         </div>
         <div class="sub-block" style="border-left-color: var(--accent);">
             <h3>🎓 Education & Sports</h3>
-            <ul><li>Institutions & Sports</li></ul>
+            <ul><li>Educational institutions and Sports in Jharkhand</li></ul>
         </div>
         <div class="sub-block" style="border-left-color: var(--accent);">
             <h3>⚖️ Laws, Economy & Environment</h3>
-            <ul><li><b>Land Related Laws (CNT, SPT, etc.)</b>, Industries, Resources, Disaster Management</li></ul>
+            <ul><li><b>Land Related Laws (CNT, SPT, etc.)</b>, Industries, Natural resources, and Disaster Management</li></ul>
         </div>
         <div class="sub-block" style="border-left-color: var(--accent);">
             <h3>🧩 Jharkhand Miscellaneous</h3>
@@ -257,19 +256,35 @@
         <div id="cnt-notes">
             <div class="notebook">
                 <h2 style="margin-top:0; font-family: Georgia, serif;">📘 The Chotanagpur Tenancy Act, 1908</h2>
-                <div class="section-title">📍 Coverage Area</div>
-                <div style="line-height:30px;">
-                    Covers: <span class="highlight">Palamu, Kolhan, N. Chotanagpur, S. Chotanagpur</span>.
+                
+                <div style="margin-bottom:15px;">
+                    <b>Covers Four Divisions:</b><br>
+                    1. <span class="highlight">Palamu (Medininagar)</span> | 2. <span class="highlight">Kolhan (Chaibasa)</span><br>
+                    3. <span class="highlight">North Chotanagpur (Hazaribagh)</span> | 4. <span class="highlight">South Chotanagpur (Ranchi)</span>
                 </div>
-                <div class="section-title"><span class="badge">Sec 3</span> Key Definitions</div>
-                <div style="line-height:30px;">
-                    • <b>Korkar:</b> Land leveled for rice cultivation.<br>
-                    • <b>Village Headman:</b> Manki, Manjhi, Pradhan.
+
+                <div style="margin-bottom:15px;">
+                    <b>Objective:</b> Passed to protect the interests of aboriginals residing within the above regions.<br>
+                    <b>Structure:</b> Contains 19 Chapters, 271 Sections, and two Schedules.
                 </div>
-                <div class="section-title"><span class="badge">Sec 4</span> Classes of Tenants</div>
-                <div style="line-height:30px;">
-                    1. Tenure-holders | 2. Raiyats | 3. Under-Raiyats | 4. Mundari Khunt-Kattidars
-                </div>
+
+                <div class="section-title"><span class="badge">Chapter 1</span> Sections 1 to 4</div>
+                <i>Identity, Area of Operation, Repeal of earlier laws & definitions.</i>
+
+                <div class="section-title"><span class="badge">Section 1</span> Name & Extent</div>
+                <b>Name:</b> Chotanagpur Tenancy Act, 1908.<br>
+                <b>Extent:</b> North Chotanagpur, South Chotanagpur & Palamu divisions.<br>
+                <b>Includes:</b> Municipal areas, Notified area Committees, and Cantonment areas.
+
+                <div class="section-title"><span class="badge">Section 2</span> Repeal</div>
+                <b>Repeal:</b> Repeal earlier tenancy law.<br>
+                • <b>Schedule A:</b> General repeal in Chotanagpur.<br>
+                • <b>Schedule B:</b> Area-Specific repeal (Dhanbad and certain police stations).
+
+                <div class="section-title"><span class="badge">Section 3</span> Definitions</div>
+                • <b>Holding:</b> A parcel or parcels of land held by a raiyat and forming the subject of a separate tenancy.<br>
+                • <b>Korkar:</b> Land artificially leveled or embanked primarily for the cultivation of rice.<br>
+                • <b>Landlord:</b> Person immediately under whom a tenant holds, and includes the Govt.
             </div>
         </div>
     </div>
