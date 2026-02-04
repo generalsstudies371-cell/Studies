@@ -137,25 +137,21 @@ nav a:hover{background:#333;}
 .topic h3{margin:0 0 6px 0;color:var(--blue);}
 
 /* MODULE GRID */
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  margin-top:15px;
-}
-.grid div{
-  background:#eef2ff;
-  padding:16px;
-  border-radius:12px;
-  text-align:center;
-  font-weight:bold;
-  cursor:pointer;
-}
-.grid div:hover{
-  background:var(--orange);
-  color:white;
-}
 
+<div class="grid-menu">
+
+  <div class="grid-item" onclick="openModule('history')">🏺 History</div>
+  <div class="grid-item" onclick="openModule('polity')">⚖️ Polity</div>
+  <div class="grid-item" onclick="openModule('economy')">💹 Economy</div>
+  <div class="grid-item" onclick="openModule('geography')">🌍 Geography</div>
+
+  <div class="grid-item" onclick="openModule('science')">🧬 Science & Tech</div>
+  <div class="grid-item" onclick="openModule('current')">📰 Current Affairs</div>
+  <div class="grid-item" onclick="openModule('jharkhand')">🏞️ Jharkhand GS</div>
+  <div class="grid-item" onclick="openModule('cnt')">📜 CNT / SPT Act</div>
+
+</div>
+  
 /* NOTEBOOK */
 #cnt-notes{display:none;margin-top:20px;}
 .notebook{
